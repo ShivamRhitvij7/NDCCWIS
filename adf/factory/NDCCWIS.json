@@ -1,9 +1,0 @@
-{
-	"name": "NDCCWIS",
-	"location": "eastus",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "b9061ecb-e89a-404a-9095-cd5c2008b285",
-		"tenantId": "2da40318-46be-402c-ba75-cfb1f656567d"
-	}
-}
