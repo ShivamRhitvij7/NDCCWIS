@@ -1,0 +1,43 @@
+{
+  "name": "SampleDataflow",
+  "type": "Microsoft.DataFactory/factories/dataflows",
+  "apiVersion": "2018-06-01",
+  "properties": {
+    "description": "Sample data flow for transformation",
+    "type": "MappingDataFlow",
+    "typeProperties": {
+      "sources": [
+        {
+          "name": "SourceCSV",
+          "dataset": {
+            "referenceName": "SampleCSVDataset",
+            "type": "DatasetReference"
+          }
+        }
+      ],
+      "sinks": [
+        {
+          "name": "SinkSQL",
+          "dataset": {
+            "referenceName": "SampleSqlDataset",
+            "type": "DatasetReference"
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "name": "FilterData",
+          "description": "Filter rows based on condition"
+        },
+        {
+          "name": "SelectColumns",
+          "description": "Select required columns"
+        },
+        {
+          "name": "DeriveColumns",
+          "description": "Create new derived columns"
+        }
+      ]
+    }
+  }
+}

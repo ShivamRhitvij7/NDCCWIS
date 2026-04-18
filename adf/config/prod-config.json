@@ -1,0 +1,21 @@
+{
+  "environment": "production",
+  "storageAccount": {
+    "name": "prodstorageaccount",
+    "url": "https://prodstorageaccount.dfs.core.windows.net"
+  },
+  "sqlDatabase": {
+    "server": "prod-sql-server.database.windows.net",
+    "database": "prod_database",
+    "schema": "dbo"
+  },
+  "integrationRuntime": {
+    "name": "prod-ir",
+    "type": "SelfHosted"
+  },
+  "parameters": {
+    "batchSize": 5000,
+    "retryCount": 5,
+    "timeout": 600
+  }
+}

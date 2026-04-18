@@ -1,0 +1,21 @@
+{
+  "environment": "development",
+  "storageAccount": {
+    "name": "devstorageaccount",
+    "url": "https://devstorageaccount.dfs.core.windows.net"
+  },
+  "sqlDatabase": {
+    "server": "dev-sql-server.database.windows.net",
+    "database": "dev_database",
+    "schema": "dbo"
+  },
+  "integrationRuntime": {
+    "name": "dev-ir",
+    "type": "SelfHosted"
+  },
+  "parameters": {
+    "batchSize": 1000,
+    "retryCount": 3,
+    "timeout": 300
+  }
+}

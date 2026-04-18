@@ -1,0 +1,49 @@
+{
+  "name": "GenericCopyTemplate",
+  "type": "Microsoft.DataFactory/factories/pipelines",
+  "apiVersion": "2018-06-01",
+  "properties": {
+    "description": "Generic copy pipeline template - parameterized for reuse",
+    "parameters": {
+      "SourceDataset": {
+        "type": "string",
+        "defaultValue": "SourceDataset"
+      },
+      "SinkDataset": {
+        "type": "string",
+        "defaultValue": "SinkDataset"
+      },
+      "ActivityName": {
+        "type": "string",
+        "defaultValue": "CopyActivity"
+      }
+    },
+    "activities": [
+      {
+        "name": "@{pipeline().parameters.ActivityName}",
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "AnySource"
+          },
+          "sink": {
+            "type": "AnySink"
+          }
+        },
+        "inputs": [
+          {
+            "referenceName": "@{pipeline().parameters.SourceDataset}",
+            "type": "DatasetReference"
+          }
+        ],
+        "outputs": [
+          {
+            "referenceName": "@{pipeline().parameters.SinkDataset}",
+            "type": "DatasetReference"
+          }
+        ]
+      }
+    ],
+    "annotations": []
+  }
+}

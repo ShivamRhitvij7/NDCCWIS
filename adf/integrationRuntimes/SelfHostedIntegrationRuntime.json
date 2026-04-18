@@ -1,0 +1,10 @@
+{
+  "name": "SelfHostedIntegrationRuntime",
+  "type": "Microsoft.DataFactory/factories/integrationruntimes",
+  "apiVersion": "2018-06-01",
+  "properties": {
+    "type": "SelfHosted",
+    "description": "Self-hosted integration runtime for on-premises connectivity",
+    "typeProperties": {}
+  }
+}

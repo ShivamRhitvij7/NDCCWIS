@@ -1,0 +1,16 @@
+{
+  "name": "SampleSqlDataset",
+  "type": "Microsoft.DataFactory/factories/datasets",
+  "apiVersion": "2018-06-01",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "AzureSqlDatabase",
+      "type": "LinkedServiceReference"
+    },
+    "type": "AzureSqlTable",
+    "typeProperties": {
+      "schema": "dbo",
+      "table": "SampleTable"
+    }
+  }
+}
