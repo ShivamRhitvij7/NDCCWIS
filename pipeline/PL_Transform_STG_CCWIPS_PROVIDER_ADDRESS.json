@@ -1,0 +1,52 @@
+{
+	"name": "PL_Transform_STG_CCWIPS_PROVIDER_ADDRESS",
+	"properties": {
+		"activities": [
+			{
+				"name": "DF_Transform_STG_LOAD_CCWIPS_PROVIDER_ADDRESS",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 1,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"pSourceSchema": {
+				"type": "String",
+				"defaultValue": "dbo"
+			},
+			"pSourceTable": {
+				"type": "String",
+				"defaultValue": "CCWIPS_PROVIDER_ADDRESS"
+			},
+			"pTargetSchema": {
+				"type": "String",
+				"defaultValue": "STG"
+			},
+			"pTargetTable": {
+				"type": "String",
+				"defaultValue": "CCWIPS_PROVIDER_ADDRESS"
+			}
+		},
+		"folder": {
+			"name": "STG/CCWIPS"
+		},
+		"annotations": [
+			"ADF Mapping Data Flow",
+			"LS_COVNERSION_SQL"
+		]
+	}
+}

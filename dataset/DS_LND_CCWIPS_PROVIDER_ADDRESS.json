@@ -1,0 +1,35 @@
+{
+	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SchemaName": {
+				"type": "String",
+				"defaultValue": "LANDING"
+			},
+			"TableName": {
+				"type": "String",
+				"defaultValue": "CCWIPS_PROVIDER_ADDRESS"
+			}
+		},
+		"annotations": [
+			"Azure SQL",
+			"Parameterized dataset"
+		],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().SchemaName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
