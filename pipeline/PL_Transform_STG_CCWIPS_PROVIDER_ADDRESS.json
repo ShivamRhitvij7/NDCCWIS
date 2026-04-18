@@ -15,6 +15,30 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DF_TRANSFORM_STG_CCWIPS_Person_Address",
+						"type": "DataFlowReference",
+						"parameters": {
+							"srcSchema": "'dbo'",
+							"srcTable": "'CCWIPS_PROVIDER_ADDRESS'",
+							"tgtSchema": "'STG'",
+							"tgtTable": "'CCWIPS_PROVIDER_ADDRESS'"
+						},
+						"datasetParameters": {
+							"dsLndCcwipsProviderAddress": {
+								"SchemaName": "LANDING",
+								"TableName": "CCWIPS_PROVIDER_ADDRESS"
+							}
+						},
+						"linkedServiceParameters": {
+							"dsLndCcwipsProviderAddress": {
+								"schemaLinkedService": {
+									"SchemaName": "LANDING",
+									"TableName": "CCWIPS_PROVIDER_ADDRESS"
+								}
+							}
+						}
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"

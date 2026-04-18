@@ -1,0 +1,135 @@
+{
+	"name": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CCWIPS_PROVIDER_ADDRESS_ID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CCWIPS_PROVIDER_ID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ADDR_TYPE_CD",
+				"type": "char"
+			},
+			{
+				"name": "PRMRY_IND",
+				"type": "char"
+			},
+			{
+				"name": "ADDR_STS_CD",
+				"type": "char"
+			},
+			{
+				"name": "STR_NBR",
+				"type": "varchar"
+			},
+			{
+				"name": "STR_NM",
+				"type": "varchar"
+			},
+			{
+				"name": "APT_NBR",
+				"type": "varchar"
+			},
+			{
+				"name": "CITY_NM",
+				"type": "varchar"
+			},
+			{
+				"name": "ST_CD",
+				"type": "char"
+			},
+			{
+				"name": "ZIP_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "ZIP_EXT",
+				"type": "varchar"
+			},
+			{
+				"name": "CNTY_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "CNTRY_CD",
+				"type": "char"
+			},
+			{
+				"name": "LAT_VAL",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 6
+			},
+			{
+				"name": "LONG_VAL",
+				"type": "decimal",
+				"precision": 11,
+				"scale": 6
+			},
+			{
+				"name": "EFF_START_DT",
+				"type": "date"
+			},
+			{
+				"name": "EFF_END_DT",
+				"type": "date"
+			},
+			{
+				"name": "REC_STS_CD",
+				"type": "char"
+			},
+			{
+				"name": "CRT_TS",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "UPD_TS",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "CRT_USER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "UPD_USER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "varbinary"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "CCWIPS_PROVIDER_ADDRESS"
+		}
+	}
+}
