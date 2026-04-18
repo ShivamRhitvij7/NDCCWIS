@@ -3,7 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_p6n",
+				"name": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
+				"description": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
