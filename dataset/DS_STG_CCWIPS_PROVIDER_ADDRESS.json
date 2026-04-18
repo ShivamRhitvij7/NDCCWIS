@@ -5,6 +5,9 @@
 			"referenceName": "LS_COVNERSION_SQL",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "STG"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
