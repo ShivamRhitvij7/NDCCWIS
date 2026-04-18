@@ -379,7 +379,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_p6n",
+						"referenceName": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
 						"type": "DatasetReference"
 					}
 				],

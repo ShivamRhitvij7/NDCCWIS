@@ -1,9 +1,12 @@
 {
-	"name": "SourceDataset_p6n",
+	"name": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_Landing_AzureBlobStorage",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SRC"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
