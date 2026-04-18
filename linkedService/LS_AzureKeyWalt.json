@@ -1,0 +1,10 @@
+{
+	"name": "LS_AzureKeyWalt",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://StateofND.vault.azure.net/"
+		}
+	}
+}
