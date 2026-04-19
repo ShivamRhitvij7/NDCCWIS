@@ -24,6 +24,13 @@
 								"type": "Expression"
 							},
 							"type": "String"
+						},
+						"RunID": {
+							"value": {
+								"value": "@pipeline().parameters.RunID",
+								"type": "Expression"
+							},
+							"type": "Int16"
 						}
 					}
 				},
