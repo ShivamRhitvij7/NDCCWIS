@@ -7,8 +7,6 @@
 				"name": "Step1_InitProfilingRun",
 				"description": "Initialize RunID and set all GOLDEN_RECORD_FLAG to P (default pass)",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step0_LookupRunID",
@@ -78,8 +76,6 @@
 				"name": "Step2_ExecuteProfilingChecks",
 				"description": "Run all 10 profiling rules and log exceptions to EXCEPTION_LOG",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step1_InitProfilingRun",
@@ -129,8 +125,6 @@
 				"name": "Step3_ApplyCleansingLogic",
 				"description": "Auto-remediate fixable records; quarantine unfixable ones",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step2_ExecuteProfilingChecks",
@@ -174,8 +168,6 @@
 				"name": "Step4_RerunProfilingCleansed",
 				"description": "Re-validate cleansed records; promote passing ones, quarantine failures",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step3_ApplyCleansingLogic",
