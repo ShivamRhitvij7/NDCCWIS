@@ -37,9 +37,9 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     srcSchema as string ('dbo'),",
+				"     srcSchema as string ('LANDING'),",
 				"     srcTable as string ('CCWIPS_PROVIDER_ADDRESS'),",
-				"     tgtSchema as string ('STG'),",
+				"     tgtSchema as string ('STAGING'),",
 				"     tgtTable as string ('CCWIPS_PROVIDER_ADDRESS')",
 				"}",
 				"source(output(",
