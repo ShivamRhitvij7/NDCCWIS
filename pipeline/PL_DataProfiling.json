@@ -206,6 +206,51 @@
 					"referenceName": "LS_COVNERSION_SQL",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Step5_GenerateSummaryReport",
+				"description": "Finalize run log with counts and pass/quarantine rates",
+				"type": "SqlServerStoredProcedure",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Step4_RerunProfilingCleansed",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.00:30:00",
+					"retry": 1,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[STAGING].[SP_GenerateSummaryReport]",
+					"storedProcedureParameters": {
+						"RunID": {
+							"value": {
+								"value": "@activity('Step0_LookupRunID').output.firstRow.RunID",
+								"type": "Expression"
+							},
+							"type": "Int32"
+						},
+						"SourceSystem": {
+							"value": {
+								"value": "@pipeline().parameters.SourceSystem",
+								"type": "Expression"
+							},
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_COVNERSION_SQL",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
