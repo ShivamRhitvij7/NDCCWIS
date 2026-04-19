@@ -76,8 +76,6 @@
 				"name": "Step2_ExecuteProfilingChecks",
 				"description": "Run all 10 profiling rules and log exceptions to EXCEPTION_LOG",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step1_InitProfilingRun",
