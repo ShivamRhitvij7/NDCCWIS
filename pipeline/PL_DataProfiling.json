@@ -71,6 +71,57 @@
 						"type": "DatasetReference"
 					}
 				}
+			},
+			{
+				"name": "Step2_ExecuteProfilingChecks",
+				"description": "Run all 10 profiling rules and log exceptions to EXCEPTION_LOG",
+				"type": "SqlServerStoredProcedure",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Step1_InitProfilingRun",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Step0_LookupRunID",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.02:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[STAGING].[SP_ExecuteProfilingChecks]",
+					"storedProcedureParameters": {
+						"RunID": {
+							"value": {
+								"value": "@activity('Step0_LookupRunID').output.firstRow.RunID",
+								"type": "Expression"
+							},
+							"type": "Int32"
+						},
+						"SourceSystem": {
+							"value": {
+								"value": "@pipeline().parameters.SourceSystem",
+								"type": "Expression"
+							},
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_COVNERSION_SQL",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
