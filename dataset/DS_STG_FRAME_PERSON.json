@@ -1,0 +1,168 @@
+{
+	"name": "DS_STG_FRAME_PERSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "STG"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FRAME_PERSON_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PERSON_NUMBER",
+				"type": "varchar"
+			},
+			{
+				"name": "SSN_ENCRYPTED",
+				"type": "varchar"
+			},
+			{
+				"name": "MEDICAID_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "FIRST_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "MIDDLE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "LAST_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "SUFFIX",
+				"type": "varchar"
+			},
+			{
+				"name": "DATE_OF_BIRTH",
+				"type": "date"
+			},
+			{
+				"name": "DATE_OF_DEATH",
+				"type": "date"
+			},
+			{
+				"name": "GENDER_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "RACE_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "SECONDARY_RACE_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "ETHNICITY_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "PRIMARY_LANGUAGE",
+				"type": "varchar"
+			},
+			{
+				"name": "CITIZENSHIP_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "MARITAL_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "PERSON_TYPE",
+				"type": "varchar"
+			},
+			{
+				"name": "TRIBAL_AFFILIATION",
+				"type": "varchar"
+			},
+			{
+				"name": "ICWA_ELIGIBLE_FLAG",
+				"type": "char"
+			},
+			{
+				"name": "EDUCATION_LEVEL",
+				"type": "varchar"
+			},
+			{
+				"name": "EMPLOYMENT_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "PRIMARY_PHONE",
+				"type": "varchar"
+			},
+			{
+				"name": "SECONDARY_PHONE",
+				"type": "varchar"
+			},
+			{
+				"name": "EMAIL_ADDRESS",
+				"type": "varchar"
+			},
+			{
+				"name": "SOURCE_RECORD_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "FRAME_CREATED_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FRAME_MODIFIED_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FRAME_CREATED_BY",
+				"type": "varchar"
+			},
+			{
+				"name": "FRAME_MODIFIED_BY",
+				"type": "varchar"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "varchar"
+			},
+			{
+				"name": "GOLDEN_RECORD_FLAG",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "FRAME_PERSON"
+		}
+	}
+}
