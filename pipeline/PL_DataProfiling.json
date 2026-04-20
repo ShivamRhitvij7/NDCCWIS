@@ -119,8 +119,6 @@
 				"name": "Step3_ApplyCleansingLogic",
 				"description": "Auto-remediate fixable records; quarantine unfixable ones",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step2_ExecuteProfilingChecks",
@@ -164,8 +162,6 @@
 				"name": "Step4_RerunProfilingCleansed",
 				"description": "Re-validate cleansed records; promote passing ones, quarantine failures",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step3_ApplyCleansingLogic",
@@ -209,8 +205,6 @@
 				"name": "Step5_GenerateSummaryReport",
 				"description": "Finalize run log with counts and pass/quarantine rates",
 				"type": "SqlServerStoredProcedure",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Step4_RerunProfilingCleansed",
