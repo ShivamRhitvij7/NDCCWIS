@@ -1,5 +1,5 @@
 {
-	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS",
+	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS_SQL",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
