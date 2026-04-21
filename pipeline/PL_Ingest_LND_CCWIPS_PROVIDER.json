@@ -1,5 +1,5 @@
 {
-	"name": "PL_Ingest_LND_CCWIPS",
+	"name": "PL_Ingest_LND_CCWIPS_PROVIDER",
 	"properties": {
 		"activities": [
 			{
@@ -17,14 +17,19 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "ndstorage//CCWIPS_PROVIDER_ADDRESS .csv"
+						"value": "ndstorage//CCWIPS_PROVIDER .csv"
 					},
 					{
 						"name": "Destination",
-						"value": "LANDING.CCWIPS_PROVIDER_ADDRESS"
+						"value": "LANDING.CCWIPS_PROVIDER"
 					}
 				],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
@@ -36,8 +41,27 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
+				"inputs": [
+					{
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_SQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"SchemaName": "LANDING",
+							"TableName": "CCWIPS_PROVIDER"
+						}
+					}
+				],
 				"outputs": [
 					{
 						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
