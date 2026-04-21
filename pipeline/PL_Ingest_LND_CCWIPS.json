@@ -1,0 +1,92 @@
+{
+	"name": "PL_Ingest_LND_CCWIPS",
+	"properties": {
+		"activities": [
+			{
+				"name": "PL_Ingest_LND_CCWIPS_PROVIDER",
+				"description": "PL_Ingest_LND_CCWIPS_PROVIDER",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ndstorage//CCWIPS_PROVIDER_ADDRESS .csv"
+					},
+					{
+						"name": "Destination",
+						"value": "LANDING.CCWIPS_PROVIDER_ADDRESS"
+					}
+				],
+				"typeProperties": {
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"outputs": [
+					{
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "LookupOutput",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "PL_Ingest_LND_CCWIPS_PROVIDER",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"folder": {
+			"name": "LANDING/CCWIPS"
+		},
+		"annotations": []
+	}
+}
