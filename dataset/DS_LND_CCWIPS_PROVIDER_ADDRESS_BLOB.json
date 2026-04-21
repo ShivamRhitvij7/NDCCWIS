@@ -1,0 +1,26 @@
+{
+	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS_BLOB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Landing_AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "LANDING/CCWIPS/BLOB"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CCWIPS_PROVIDER_ADDRESS .csv",
+				"container": "ndstorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
