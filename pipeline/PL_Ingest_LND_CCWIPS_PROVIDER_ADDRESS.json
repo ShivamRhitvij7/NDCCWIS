@@ -38,7 +38,13 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
@@ -385,14 +391,14 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_p6n",
+						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"folder": {
-			"name": "Ingestion/LND/CCWIPS"
+			"name": "Ingestion/LANDING/CCWIPS"
 		},
 		"annotations": []
 	}
