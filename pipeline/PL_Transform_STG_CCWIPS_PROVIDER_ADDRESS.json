@@ -58,7 +58,7 @@
 			}
 		},
 		"folder": {
-			"name": "Conversion/STAGING/CCWIPS"
+			"name": "STAGING/CCWIPS"
 		},
 		"annotations": [
 			"ADF Mapping Data Flow",
