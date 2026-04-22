@@ -415,6 +415,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "LANDING/FRAME"
+		},
 		"annotations": []
 	}
 }
