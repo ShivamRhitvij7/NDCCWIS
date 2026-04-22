@@ -1,0 +1,75 @@
+{
+	"name": "DS_STG_CLEANSING_LOG",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3. STAGING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CLEANSING_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RUN_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QUARANTINE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SOURCE_TABLE",
+				"type": "varchar"
+			},
+			{
+				"name": "LEGACY_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "RULE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ERROR_CODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FIELD_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "ORIGINAL_VALUE",
+				"type": "varchar"
+			},
+			{
+				"name": "CLEANSED_VALUE",
+				"type": "varchar"
+			},
+			{
+				"name": "CLEANSING_ACTION",
+				"type": "varchar"
+			},
+			{
+				"name": "CLEANSING_TIMESTAMP",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "CLEANSING_LOG"
+		}
+	}
+}
