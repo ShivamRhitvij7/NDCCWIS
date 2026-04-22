@@ -392,41 +392,6 @@
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "LookupOutput",
-				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "@activity('PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS').output ",
-							"type": "Expression"
-						},
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
-						"type": "DatasetReference"
-					}
-				}
 			}
 		],
 		"folder": {
