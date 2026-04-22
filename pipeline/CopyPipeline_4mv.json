@@ -43,6 +43,7 @@
 									"writeBatchTimeout": "00:00:01",
 									"writeBehavior": "insert",
 									"sqlWriterUseTableLock": false,
+									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
