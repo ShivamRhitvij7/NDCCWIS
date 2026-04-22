@@ -5,6 +5,9 @@
 			"referenceName": "LS_Landing_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "LANDING/FRAME/BLOB"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
