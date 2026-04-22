@@ -1,0 +1,169 @@
+{
+	"name": "DS_STG_FRAME_CASE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3. STAGING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FRAME_CASE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CASE_NUMBER",
+				"type": "varchar"
+			},
+			{
+				"name": "LEGACY_CASE_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "CASE_TYPE",
+				"type": "varchar"
+			},
+			{
+				"name": "CASE_SUBTYPE",
+				"type": "varchar"
+			},
+			{
+				"name": "ALLEGATION_TYPE",
+				"type": "varchar"
+			},
+			{
+				"name": "REFERRAL_SOURCE",
+				"type": "varchar"
+			},
+			{
+				"name": "CASE_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "INTAKE_DATE",
+				"type": "date"
+			},
+			{
+				"name": "INVESTIGATION_START_DATE",
+				"type": "date"
+			},
+			{
+				"name": "OPEN_DATE",
+				"type": "date"
+			},
+			{
+				"name": "CLOSE_DATE",
+				"type": "date"
+			},
+			{
+				"name": "CLOSE_REASON",
+				"type": "varchar"
+			},
+			{
+				"name": "RISK_LEVEL",
+				"type": "varchar"
+			},
+			{
+				"name": "SAFETY_ASSESSMENT",
+				"type": "varchar"
+			},
+			{
+				"name": "FINDING_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "ASSIGNED_WORKER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "ASSIGNED_WORKER_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "SUPERVISOR_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "SUPERVISOR_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "COUNTY_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "COUNTY_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "OFFICE_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "OFFICE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "STATE_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "PRIMARY_PERSON_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SOURCE_RECORD_STATUS",
+				"type": "varchar"
+			},
+			{
+				"name": "FRAME_CREATED_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FRAME_MODIFIED_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FRAME_CREATED_BY",
+				"type": "varchar"
+			},
+			{
+				"name": "FRAME_MODIFIED_BY",
+				"type": "varchar"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "FRAME_CASE"
+		}
+	}
+}

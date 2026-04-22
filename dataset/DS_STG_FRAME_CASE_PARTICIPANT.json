@@ -1,0 +1,148 @@
+{
+	"name": "DS_STG_FRAME_CASE_PARTICIPANT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3. STAGING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FRAME_CASE_PARTICIPANT_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PERSON_NUMBER",
+				"type": "varchar"
+			},
+			{
+				"name": "CASE_NUMBER",
+				"type": "varchar"
+			},
+			{
+				"name": "ROLE_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "ROLE_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "PRMRY_ROLE_IND",
+				"type": "char"
+			},
+			{
+				"name": "RLTNSHP_TO_VICTIM_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RLTNSHP_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "PRTCPNT_START_DT",
+				"type": "date"
+			},
+			{
+				"name": "PRTCPNT_END_DT",
+				"type": "date"
+			},
+			{
+				"name": "ACTIVE_IND",
+				"type": "char"
+			},
+			{
+				"name": "COURT_ORDERED_IND",
+				"type": "char"
+			},
+			{
+				"name": "CUSTODY_GRANTED_IND",
+				"type": "char"
+			},
+			{
+				"name": "TPR_IND",
+				"type": "char"
+			},
+			{
+				"name": "TPR_DT",
+				"type": "date"
+			},
+			{
+				"name": "SAFETY_PLAN_IND",
+				"type": "char"
+			},
+			{
+				"name": "NO_CONTACT_IND",
+				"type": "char"
+			},
+			{
+				"name": "NO_CONTACT_DETAIL",
+				"type": "varchar"
+			},
+			{
+				"name": "SVCS_REFERRED_IND",
+				"type": "char"
+			},
+			{
+				"name": "SVCS_TYPE_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "REC_STS_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "CRT_TS",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UPD_TS",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CRT_USER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "UPD_USER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "varchar"
+			},
+			{
+				"name": "GOLDEN_RECORD_FLAG",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "FRAME_CASE_PARTICIPANT"
+		}
+	}
+}
