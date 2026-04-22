@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_pdd",
+				"name": "PL_Ingest_LND_FRAME_CASE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -487,6 +487,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "LANDING/FRAME"
+		},
 		"annotations": []
 	}
 }
