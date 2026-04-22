@@ -1,5 +1,5 @@
 {
-	"name": "ExecutePipelines",
+	"name": "LND_ExecutePipelines",
 	"properties": {
 		"activities": [
 			{
