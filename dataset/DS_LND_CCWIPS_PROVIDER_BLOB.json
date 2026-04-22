@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "2. LANDING/CCWIPS/BLOB"
+			"name": "1. EXTRACT"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
