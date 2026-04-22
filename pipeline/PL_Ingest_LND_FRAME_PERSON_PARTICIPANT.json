@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_lbq",
+				"name": "PL_Ingest_LND_FRAME_PERSON_PARTICIPANT",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
