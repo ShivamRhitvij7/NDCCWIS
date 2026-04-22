@@ -39,7 +39,11 @@
 									"type": "CommonDataServiceForAppsSource"
 								},
 								"sink": {
-									"type": "AzureSqlSink"
+									"type": "AzureSqlSink",
+									"writeBatchTimeout": "00:00:01",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false,
+									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
 								"validateDataConsistency": false,
