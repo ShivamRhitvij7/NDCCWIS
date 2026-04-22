@@ -1,0 +1,78 @@
+{
+	"name": "DS_STG_EXCEPTION_LOG",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3. STAGING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "QUARANTINE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RUN_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LEGACY_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "SOURCE_SYSTEM",
+				"type": "varchar"
+			},
+			{
+				"name": "SOURCE_TABLE",
+				"type": "varchar"
+			},
+			{
+				"name": "RULE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ERROR_CODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WARNING_LEVEL",
+				"type": "char"
+			},
+			{
+				"name": "FIELD_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "FIELD_VALUE",
+				"type": "varchar"
+			},
+			{
+				"name": "FAILURE_REASON",
+				"type": "varchar"
+			},
+			{
+				"name": "LOG_TIMESTAMP",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "RECORD_STATUS",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "EXCEPTION_LOG"
+		}
+	}
+}

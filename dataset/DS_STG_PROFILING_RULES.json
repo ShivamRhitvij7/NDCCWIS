@@ -1,0 +1,60 @@
+{
+	"name": "DS_STG_PROFILING_RULES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3. STAGING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "RULE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ERROR_CODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RULE_DESCRIPTION",
+				"type": "varchar"
+			},
+			{
+				"name": "WARNING_LEVEL",
+				"type": "char"
+			},
+			{
+				"name": "Legacy_Table",
+				"type": "varchar"
+			},
+			{
+				"name": "Legacy_Column_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "IS_ACTIVE",
+				"type": "bit"
+			},
+			{
+				"name": "CREATED_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Legacy_System_Name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGING",
+			"table": "PROFILING_RULES"
+		}
+	}
+}
