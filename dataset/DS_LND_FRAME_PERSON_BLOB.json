@@ -1,0 +1,160 @@
+{
+	"name": "DS_LND_FRAME_PERSON_BLOB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Landing_AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FRAME_PERSON.txt",
+				"container": "ndstorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FRAME_PERSON_ID",
+				"type": "String"
+			},
+			{
+				"name": "PERSON_NUMBER",
+				"type": "String"
+			},
+			{
+				"name": "SSN_ENCRYPTED",
+				"type": "String"
+			},
+			{
+				"name": "MEDICAID_ID",
+				"type": "String"
+			},
+			{
+				"name": "FIRST_NAME",
+				"type": "String"
+			},
+			{
+				"name": "MIDDLE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "LAST_NAME",
+				"type": "String"
+			},
+			{
+				"name": "SUFFIX",
+				"type": "String"
+			},
+			{
+				"name": "DATE_OF_BIRTH",
+				"type": "String"
+			},
+			{
+				"name": "DATE_OF_DEATH",
+				"type": "String"
+			},
+			{
+				"name": "GENDER_CODE",
+				"type": "String"
+			},
+			{
+				"name": "RACE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "SECONDARY_RACE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "ETHNICITY_CODE",
+				"type": "String"
+			},
+			{
+				"name": "PRIMARY_LANGUAGE",
+				"type": "String"
+			},
+			{
+				"name": "CITIZENSHIP_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "MARITAL_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "PERSON_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "TRIBAL_AFFILIATION",
+				"type": "String"
+			},
+			{
+				"name": "ICWA_ELIGIBLE_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "EDUCATION_LEVEL",
+				"type": "String"
+			},
+			{
+				"name": "EMPLOYMENT_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "PRIMARY_PHONE",
+				"type": "String"
+			},
+			{
+				"name": "SECONDARY_PHONE",
+				"type": "String"
+			},
+			{
+				"name": "EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE_RECORD_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "FRAME_CREATED_DATE",
+				"type": "String"
+			},
+			{
+				"name": "FRAME_MODIFIED_DATE",
+				"type": "String"
+			},
+			{
+				"name": "FRAME_CREATED_BY",
+				"type": "String"
+			},
+			{
+				"name": "FRAME_MODIFIED_BY",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "String"
+			}
+		]
+	}
+}
