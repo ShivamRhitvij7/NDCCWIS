@@ -1,5 +1,5 @@
 {
-	"name": "LANDING_MASTER_PIPELINE",
+	"name": "PL_Blob_Lnd_MASTER_PIPELINE",
 	"properties": {
 		"activities": [
 			{
