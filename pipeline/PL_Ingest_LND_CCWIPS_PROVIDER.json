@@ -26,20 +26,22 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "DelimitedTextReadSettings"
 						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE TABLE LANDING.CCWIPS_PROVIDER;",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
@@ -54,18 +56,18 @@
 				},
 				"inputs": [
 					{
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
 						"referenceName": "DS_LND_CCWIPS_PROVIDER_SQL",
 						"type": "DatasetReference",
 						"parameters": {
 							"SchemaName": "LANDING",
 							"TableName": "CCWIPS_PROVIDER"
 						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
-						"type": "DatasetReference"
 					}
 				]
 			}
