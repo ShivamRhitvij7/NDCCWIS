@@ -5,7 +5,7 @@
 		"activities": [
 			{
 				"name": "Step1_InitProfilingRun",
-				"description": "Initialize RunID and set all GOLDEN_RECORD_FLAG to P (default pass)",
+				"description": "Initialize RunID and set all GOLDEN_RECORD_FLAG to I (Initialize)",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -117,7 +117,7 @@
 			},
 			{
 				"name": "Step3_ApplyCleansingLogic",
-				"description": "Auto-remediate fixable records; quarantine unfixable ones",
+				"description": "Perform Auto Cleansing on fixable records. and Transfer unfixable ones ti manual review",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -160,7 +160,7 @@
 			},
 			{
 				"name": "Step4_RerunProfilingCleansed",
-				"description": "Re-validate cleansed records; promote passing ones, quarantine failures",
+				"description": "Re-validate auto cleansed records. Convert cleansed Records into Passed status and convert non fixable records into Failures status",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -203,7 +203,7 @@
 			},
 			{
 				"name": "Step5_GenerateSummaryReport",
-				"description": "Finalize run log with counts and pass/quarantine rates",
+				"description": "Finalize run log with counts of pass/fail records",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
