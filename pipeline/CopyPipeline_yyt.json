@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_yyt",
+				"name": "PL_Ingest_LND_FRAME_PERSON",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -475,6 +475,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "LANDING/FRAME"
+		},
 		"annotations": []
 	}
 }
