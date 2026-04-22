@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "1. EXTRACT"
+			"name": "3. STAGING"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
