@@ -1,0 +1,23 @@
+{
+	"name": "DestinationDataset_2iv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Landing_AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CCWIS_PROVIDER.csv",
+				"container": "ndccwis"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
