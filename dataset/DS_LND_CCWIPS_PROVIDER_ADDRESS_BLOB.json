@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "LANDING/CCWIPS/BLOB"
+			"name": "2. LANDING/CCWIPS/BLOB"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "LANDING/FRAME/TABLES"
+			"name": "2. LANDING/FRAME/TABLES"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",

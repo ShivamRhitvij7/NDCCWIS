@@ -1,5 +1,5 @@
 {
-	"name": "LND_ExecutePipelines",
+	"name": "Landing_Master_Pipelines",
 	"properties": {
 		"activities": [
 			{
@@ -12,7 +12,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_Ingest_LND_CCWIPS_PROVIDER",
+						"referenceName": "PL_Blob_Lnd_CCWIPS_PROVIDER",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -35,7 +35,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
+						"referenceName": "PL_Blob_Lnd_CCWIPS_PROVIDER_ADDRESS",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -51,7 +51,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_Ingest_LND_FRAME_PERSON",
+						"referenceName": "PL_Blob_Lnd_FRAME_PERSON",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -67,7 +67,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_Ingest_LND_FRAME_CASE",
+						"referenceName": "PL_Blob_Lnd_FRAME_CASE",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -96,7 +96,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_Ingest_LND_FRAME_PERSON_PARTICIPANT",
+						"referenceName": "PL_Blob_Lnd_FRAME_PERSON_PARTICIPANT",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

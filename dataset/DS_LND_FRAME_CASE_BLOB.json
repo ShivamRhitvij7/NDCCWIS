@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "LANDING/FRAME/BLOB"
+			"name": "2. LANDING/FRAME/BLOB"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

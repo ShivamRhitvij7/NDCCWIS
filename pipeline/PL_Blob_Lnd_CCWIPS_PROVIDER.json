@@ -1,5 +1,5 @@
 {
-	"name": "PL_Ingest_LND_CCWIPS_PROVIDER",
+	"name": "PL_Blob_Lnd_CCWIPS_PROVIDER",
 	"properties": {
 		"activities": [
 			{
@@ -73,7 +73,7 @@
 			}
 		],
 		"folder": {
-			"name": "LANDING/CCWIPS"
+			"name": "LANDING/2. CCWIPS"
 		},
 		"annotations": []
 	}

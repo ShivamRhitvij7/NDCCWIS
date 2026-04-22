@@ -1,5 +1,5 @@
 {
-	"name": "PL_Ingest_LND_FRAME_CASE",
+	"name": "PL_Blob_Lnd_FRAME_CASE",
 	"properties": {
 		"activities": [
 			{
@@ -488,7 +488,7 @@
 			}
 		],
 		"folder": {
-			"name": "LANDING/FRAME"
+			"name": "LANDING/1. FRAME"
 		},
 		"annotations": []
 	}

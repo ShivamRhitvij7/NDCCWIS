@@ -1,5 +1,5 @@
 {
-	"name": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
+	"name": "PL_Blob_Lnd_CCWIPS_PROVIDER_ADDRESS",
 	"properties": {
 		"activities": [
 			{
@@ -44,348 +44,282 @@
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
-					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
 							{
 								"source": {
 									"name": "CCWIPS_PROVIDER_ADDRESS_ID",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CCWIPS_PROVIDER_ADDRESS_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"type": "Int64"
 								}
 							},
 							{
 								"source": {
 									"name": "CCWIPS_PROVIDER_ID",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CCWIPS_PROVIDER_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"type": "Int64"
 								}
 							},
 							{
 								"source": {
 									"name": "ADDR_TYPE_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ADDR_TYPE_CD",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "PRMRY_IND",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "PRMRY_IND",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "ADDR_STS_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ADDR_STS_CD",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "STR_NBR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "STR_NBR",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "STR_NM",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "STR_NM",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "APT_NBR",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "APT_NBR",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "CITY_NM",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CITY_NM",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "ST_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ST_CD",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "ZIP_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ZIP_CD",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "ZIP_EXT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ZIP_EXT",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "CNTY_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CNTY_CD",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "CNTRY_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CNTRY_CD",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "LAT_VAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "LAT_VAL",
-									"type": "Decimal",
-									"physicalType": "decimal"
+									"type": "Decimal"
 								}
 							},
 							{
 								"source": {
 									"name": "LONG_VAL",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "LONG_VAL",
-									"type": "Decimal",
-									"physicalType": "decimal"
+									"type": "Decimal"
 								}
 							},
 							{
 								"source": {
 									"name": "EFF_START_DT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "EFF_START_DT",
-									"type": "DateTime",
-									"physicalType": "date"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
 									"name": "EFF_END_DT",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "EFF_END_DT",
-									"type": "DateTime",
-									"physicalType": "date"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
 									"name": "REC_STS_CD",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "REC_STS_CD",
-									"type": "String",
-									"physicalType": "char"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "CRT_TS",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CRT_TS",
-									"type": "DateTime",
-									"physicalType": "datetime2"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
 									"name": "UPD_TS",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "UPD_TS",
-									"type": "DateTime",
-									"physicalType": "datetime2"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
 									"name": "CRT_USER_ID",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "CRT_USER_ID",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "UPD_USER_ID",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "UPD_USER_ID",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "LOAD_BATCH_ID",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "LOAD_BATCH_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"type": "Int64"
 								}
 							},
 							{
 								"source": {
 									"name": "LOAD_DATE",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "LOAD_DATE",
-									"type": "DateTime",
-									"physicalType": "datetime2"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
 									"name": "SOURCE_FILE_NAME",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "SOURCE_FILE_NAME",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "ROW_HASH",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "ROW_HASH",
-									"type": "Byte[]",
-									"physicalType": "varbinary"
+									"type": "Byte[]"
 								}
 							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						]
 					}
 				},
-				"inputs": [
-					{
-						"referenceName": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
-						"type": "DatasetReference"
-					}
-				],
 				"outputs": [
 					{
 						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
@@ -395,7 +329,7 @@
 			}
 		],
 		"folder": {
-			"name": "LANDING/CCWIPS"
+			"name": "LANDING/2. CCWIPS"
 		},
 		"annotations": []
 	}
