@@ -243,6 +243,108 @@
 					"referenceName": "LS_COVNERSION_SQL",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Lookup_PROFILING_RULES",
+				"description": "See the PROFILING_RULES",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Step1_InitProfilingRun",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT* FROM [STAGING].[PROFILING_RULES];",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Lookup_Exception_log",
+				"description": "See the exception_Log",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Step2_ExecuteProfilingChecks",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT* FROM [STAGING].[EXCEPTION_LOG];",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Lookup_Clensing_log",
+				"description": "See the Clensing_log",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Step3_ApplyCleansingLogic",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT* FROM [STAGING].[CLEANSING_LOG];",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
 			}
 		],
 		"parameters": {
