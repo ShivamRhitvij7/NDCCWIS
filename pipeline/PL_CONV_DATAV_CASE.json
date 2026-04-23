@@ -29,6 +29,6366 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "crb65_casesummarycanvasappplaceholder",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "crb65_casesummarycanvasappplaceholder",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "createdby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "createdby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "createdbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "createdbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "createdbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "createdbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "createdon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "createdon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "createdonbehalfby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "createdonbehalfby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "createdonbehalfbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "createdonbehalfbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "createdonbehalfbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "createdonbehalfbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "cw_confidentialityreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "cw_confidentialityreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "cw_dateassigned",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "cw_dateassigned",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "entityimage_timestamp",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "entityimage_timestamp",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "entityimage_url",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "entityimage_url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "entityimageid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "entityimageid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "il_daystodeadline",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "il_daystodeadline",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "il_deadlinestatus",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "il_deadlinestatus",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "importsequencenumber",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "importsequencenumber",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "modifiedby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "modifiedbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "modifiedbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "modifiedon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedonbehalfby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "modifiedonbehalfby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedonbehalfbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "modifiedonbehalfbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "modifiedonbehalfbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "modifiedonbehalfbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "ownerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "owneridname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "owneridname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "owneridtype",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "owneridtype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "owneridyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "owneridyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "owningbusinessunit",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "owningbusinessunit",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "owningbusinessunitname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "owningbusinessunitname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "owningteam",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "owningteam",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "owninguser",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "owninguser",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "processid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "processid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "stageid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "stageid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "statecode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "statecode",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "statuscode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "statuscode",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "timezoneruleversionnumber",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "timezoneruleversionnumber",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "traversedpath",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "traversedpath",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "utcconversiontimezonecode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "utcconversiontimezonecode",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "versionnumber",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "versionnumber",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_abridgedemandpayment",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_abridgedemandpayment",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_abridgenotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_abridgenotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_abridgenotesdetermination",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_abridgenotesdetermination",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_activedfsworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_activedfsworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_activedfsworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_activedfsworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_activedfsworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_activedfsworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_activitiesdone",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_activitiesdone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_addictionalcoholmisuse",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_addictionalcoholmisuse",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_addictiondrugmisuse",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_addictiondrugmisuse",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_address",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_admissiondate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_admissiondate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_age",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_age",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_agreementstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_agreementstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_alcoholabuse",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_alcoholabuse",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_alladultsandchildreninhomeintrvd",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_alladultsandchildreninhomeintrvd",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_alladultsinthehomeinterviewed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_alladultsinthehomeinterviewed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_allchildreninthehomeinterviewedobs",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_allchildreninthehomeinterviewedobs",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_allcriminalbackgroundcheckscompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_allcriminalbackgroundcheckscompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_allegedperpetratorinterviewed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_allegedperpetratorinterviewed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_allegedperpinformedofallegations",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_allegedperpinformedofallegations",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_applicablechildnotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_applicablechildnotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_appropriatedapnotescompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_appropriatedapnotescompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_appropriatedapnotescompletedt",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_appropriatedapnotescompletedt",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedsupervisor",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_assignedsupervisor",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedsupervisorname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assignedsupervisorname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedsupervisoryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assignedsupervisoryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_assignedworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assignedworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedworkersmanager",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assignedworkersmanager",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignedworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assignedworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assignto",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_assignto",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assigntoname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assigntoname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_assigntoyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_assigntoyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_associatedintake",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_associatedintake",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_associatedintakename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_associatedintakename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_attendancesheethasbeenuploaded",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_attendancesheethasbeenuploaded",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_attendancesheetsuploaded",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_attendancesheetsuploaded",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_backgroundcheckcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_backgroundcheckcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_backgroundcheckcompleteddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_backgroundcheckcompleteddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_behaviorproblemchild",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_behaviorproblemchild",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_birthcertificatessnappliedfor",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_birthcertificatessnappliedfor",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_bypassflag",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_bypassflag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_bypassim40casedischarge",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_bypassim40casedischarge",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_cacforensicinterview",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_cacforensicinterview",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casagalappointed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casagalappointed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseclosedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_caseclosedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseclosure",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_caseclosure",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseclosurenotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_caseclosurenotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casedischargestatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casedischargestatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casedispositionoverriddentopic",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casedispositionoverriddentopic",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casedispositionoverridereason",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_casedispositionoverridereason",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseduedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_caseduedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_caseid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casenamedivisionwise",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_casenamedivisionwise",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseopendate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_caseopendate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casepersonclientpid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_casepersonclientpid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseplanstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_caseplanstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casesupervisor",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_casesupervisor",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_causingcaseid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_causingcaseid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_celebrationscheduled",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_celebrationscheduled",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_certificatestatus",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_certificatestatus",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_chargespending",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_chargespending",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_chargetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_chargetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_checklistchildinfostercare",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_checklistchildinfostercare",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_checklistintactfamily",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_checklistintactfamily",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childplacementeventstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_childplacementeventstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childplacementreviewboardnotified",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_childplacementreviewboardnotified",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childsafetyagreementisinplace",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_childsafetyagreementisinplace",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childsage",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_childsage",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childstrengths",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_childstrengths",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_childsupportapplicationinitiated",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_childsupportapplicationinitiated",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientchildprovided60daysnotice",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_clientchildprovided60daysnotice",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientenrollmentcase",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientenrollmentcase",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientfirstname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientfirstname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientfullname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientfullname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientlastname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientlastname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientlastnamehyperlink",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientlastnamehyperlink",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientname",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_clientname",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientnamename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientnamename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientnameyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientnameyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientparentprovided60daysnotice",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_clientparentprovided60daysnotice",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientpid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_clientpid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clientteacherprovided60daysnotice",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_clientteacherprovided60daysnotice",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clinicallydiagemotionaldistcaregiver",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_clinicallydiagemotionaldistcaregiver",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_clinicallydiagemotionaldisturbance",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_clinicallydiagemotionaldisturbance",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closurelettersent",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closurelettersent",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closurelettersenttofamily",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closurelettersenttofamily",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closureprimaryreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closureprimaryreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closurereason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closurereason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closuresecondaryreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closuresecondaryreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closuretype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closuretype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_collateralinterviewsperformed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_collateralinterviewsperformed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_compactscenario",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_compactscenario",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completehealthscreening",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completehealthscreening",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completemaysiresults",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completemaysiresults",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completeorientation",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completeorientation",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completepreaprogressnote",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completepreaprogressnote",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completepropertyinventory",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completepropertyinventory",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completepropertyissuance",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completepropertyissuance",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completeroomassignment",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completeroomassignment",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_completevisitorslist",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_completevisitorslist",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_conclusiondetail",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_conclusiondetail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_confidentialityformreceivedverified",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_confidentialityformreceivedverified",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_consentdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_consentdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_consentsacknowledgement",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_consentsacknowledgement",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_contacttypeotherpleasespecify",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_contacttypeotherpleasespecify",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_converteddata",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_converteddata",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_county",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_county",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_courtorderdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_courtorderdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_courtorderevaluation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_courtorderevaluation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_createplacement",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_createplacement",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_criticaldate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_criticaldate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_criticaldateyesno",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_criticaldateyesno",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_csnassessandplancompletedontime",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_csnassessandplancompletedontime",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_custodypetitioninitiated",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_custodypetitioninitiated",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_date100breceived",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_date100breceived",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_datecompleted",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_datecompleted",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dateofbirth",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_dateofbirth",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dateofdischarge",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_dateofdischarge",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dateoftreatmentplan",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_dateoftreatmentplan",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_daysoverdue",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_daysoverdue",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_decisionsnote",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_decisionsnote",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_demographicinformationonabsentparent",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_demographicinformationonabsentparent",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_descriptiond",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_descriptiond",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_detail",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_detail",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_determination",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_determination",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_determinationapprovaldate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_determinationapprovaldate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_determinationstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_determinationstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_diploma",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_diploma",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_diplomadate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_diplomadate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_directorreviewcheck",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_directorreviewcheck",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dischargecategory",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_dischargecategory",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dischargedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_dischargedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dischargereason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_dischargereason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dispositiondate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_dispositiondate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dispositionnotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_dispositionnotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dispositionpriority",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_dispositionpriority",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dispositionstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_dispositionstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_division",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_division",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_docofmckinneyventobestintrstmtng",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_docofmckinneyventobestintrstmtng",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_doescasedispositionoverrideapply",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_doescasedispositionoverrideapply",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_doeschildhavespecialneeds",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_doeschildhavespecialneeds",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_domesticviolence",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_domesticviolence",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_drugabuse",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_drugabuse",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_educationalrightsparent",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_educationalrightsparent",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_educationalsurrogateparentapplication",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_educationalsurrogateparentapplication",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_educationtype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_educationtype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_emotionallydisturbed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_emotionallydisturbed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_endenrollmentcomplete",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_endenrollmentcomplete",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_endenrollmentother",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_endenrollmentother",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_engagementmeetingdapnotecompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_engagementmeetingdapnotecompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_enrollmentenddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_enrollmentenddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_enrollmentendnotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_enrollmentendnotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_enrollmentstartdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_enrollmentstartdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_esrdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_esrdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_extension",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_extension",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_externalid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_facetofacecontactperformedwithin30",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_facetofacecontactperformedwithin30",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_facetofacecontactscompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_facetofacecontactscompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_facility",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_facility",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_facilityname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_facilityname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_facilityyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_facilityyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_familyemploymentfinancialresources",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_familyemploymentfinancialresources",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_familyengagementmeeting",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_familyengagementmeeting",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_familystatus",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_familystatus",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_familystoryreviewedwithsupervisor",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_familystoryreviewedwithsupervisor",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_familyvision",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_familyvision",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_fifcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_fifcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finalcasedispositionpi",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_finalcasedispositionpi",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finaldispositionstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_finaldispositionstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finalfamilyrisklvlandcasedispo",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_finalfamilyrisklvlandcasedispo",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finalsdmrecommendation",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_finalsdmrecommendation",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finalsdmrisklevel",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_finalsdmrisklevel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_findingid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_findingid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_findingidname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_findingidname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_fivedayplndonein5daysofplacement",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_fivedayplndonein5daysofplacement",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_fordatamaintenancelogic",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_fordatamaintenancelogic",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_frequency",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_frequency",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_fsadocumentneededstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_fsadocumentneededstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_gradelevel",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_gradelevel",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_grouptherapy",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_grouptherapy",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_hearingrequestdecision",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_hearingrequestdecision",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_hearingrequestdecisiondate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_hearingrequestdecisiondate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_hearingrequesttype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_hearingrequesttype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_hipaanoticeprovidedtoclients",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_hipaanoticeprovidedtoclients",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homeneighborhoodpeers",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_homeneighborhoodpeers",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyagencyfinal",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_homestudyagencyfinal",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyagencypreliminary",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_homestudyagencypreliminary",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyevaluationstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_homestudyevaluationstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudynotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_homestudynotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyrequestreceivedfinal",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_homestudyrequestreceivedfinal",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyrequestreceivedpreliminary",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_homestudyrequestreceivedpreliminary",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyrequestsentfinal",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_homestudyrequestsentfinal",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_homestudyrequestsentpreliminary",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_homestudyrequestsentpreliminary",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_housingproblems",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_housingproblems",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_humantrafficking",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_humantrafficking",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_humantraffickingiancands",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_humantraffickingiancands",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_icjrequestrecordtype",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_icjrequestrecordtype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ideaprimary",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ideaprimary",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ideasecondary",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ideasecondary",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_identifiedunderlyingneeds",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_identifiedunderlyingneeds",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_iependdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_iependdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_iepstartdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_iepstartdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifccaseclosed",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ifccaseclosed",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifnowhychildnoticebeforeclosure",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_ifnowhychildnoticebeforeclosure",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifnowhyparentnoticebeforeclosure",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_ifnowhyparentnoticebeforeclosure",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifnowhyteachernoticebeforeclosure",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_ifnowhyteachernoticebeforeclosure",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifotherpleasespecifygrpthrpy",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ifotherpleasespecifygrpthrpy",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifotherpleasespecifyindthrpy",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ifotherpleasespecifyindthrpy",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ifotherpleasespecifypscyfollowup",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ifotherpleasespecifypscyfollowup",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ilcontractedproviderparentorganizati",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ilcontractedproviderparentorganizati",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ilcontractedproviderworker",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ilcontractedproviderworker",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_inactivationconfirmation",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_inactivationconfirmation",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_inadequateincome",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_inadequateincome",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_incidentnarrative",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_incidentnarrative",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_individualtherapy",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_individualtherapy",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_informationreleasesigned",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_informationreleasesigned",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_informationreleasesignedfair",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_informationreleasesignedfair",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialassignmenteventstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialassignmenteventstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialcansassessmentcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialcansassessmentcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialcontactdapnotecompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialcontactdapnotecompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialcontactresponsetime",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialcontactresponsetime",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialfamilycontact",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialfamilycontact",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialfamilymeetinglocation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialfamilymeetinglocation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialpocmeeting",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_initialpocmeeting",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_initialtargetedinterventionplan",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_initialtargetedinterventionplan",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_intakedispositioncompleteddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_intakedispositioncompleteddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_intakeid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_intakeid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_intakestatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_intakestatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_investigationdetail",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_investigationdetail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_investigationoutcome",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_investigationoutcome",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_invstgoutcomeltrsenttoallgdperp",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_invstgoutcomeltrsenttoallgdperp",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_isatreatmentplanneeded",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_isatreatmentplanneeded",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_isthisanapplicablechild",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_isthisanapplicablechild",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_isyouthcurrentlyintreatment",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_isyouthcurrentlyintreatment",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_iveeligible",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_iveeligible",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_lastreviewcompleteddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_lastreviewcompleteddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_learningdisability",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_learningdisability",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_learningdisabilitycaregiver",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_learningdisabilitycaregiver",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_legalhistoryoffamily",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_legalhistoryoffamily",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_levelofcarecompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_levelofcarecompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_leveloftreatmentyouthwasinpriorto",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_leveloftreatmentyouthwasinpriorto",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_locationofpocmeetings",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_locationofpocmeetings",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_locationofpocmeetingst",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_locationofpocmeetingst",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_lowincomefinancialstress",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_lowincomefinancialstress",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_manageremail",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_manageremail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_managerreview",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_managerreview",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_managersmanagerid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_managersmanagerid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_medicalcondition",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_medicalcondition",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_medicalexam",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_medicalexam",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_medicalinformationrequested",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_medicalinformationrequested",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_medicalmentalphysicalemotionalcond",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_medicalmentalphysicalemotionalcond",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_mentalcondition",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_mentalcondition",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_mentalretardation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_mentalretardation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_mentalretardationcaregiver",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_mentalretardationcaregiver",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_monthlypsychiatryfollowup",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_monthlypsychiatryfollowup",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_naturalsupportsattendedthemeeting",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_naturalsupportsattendedthemeeting",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_naturalsupportsattendedthemeetingt",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_naturalsupportsattendedthemeetingt",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ncandsdefinition",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ncandsdefinition",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_noneidentified",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_noneidentified",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_noneidentifiedcaregiver",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_noneidentifiedcaregiver",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_nosafetythreatscurrentlyexist",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_nosafetythreatscurrentlyexist",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_nosignificantserviceneedsexist",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_nosignificantserviceneedsexist",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_notes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_notificationtext",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_notificationtext",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_originatingcase",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_originatingcase",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_originatingcasename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_originatingcasename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_originatingintake",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_originatingintake",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_originatingintakename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_originatingintakename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_other",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_other",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_othercomments",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_othercomments",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_otherguardianship",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_otherguardianship",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_othermeddiagconditionwithsplcare",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_othermeddiagconditionwithsplcare",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_othermedicalchroniccondition",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_othermedicalchroniccondition",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_othermedicallydiagnosedcondition",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_othermedicallydiagnosedcondition",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_otherreasonforreferral",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_otherreasonforreferral",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_outcome",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_outcome",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_over60dayreasonfinal",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_over60dayreasonfinal",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_over60dayreasonpreliminary",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_over60dayreasonpreliminary",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ownerfullname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ownerfullname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ownerrole",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_ownerrole",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_parentguardianname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_parentguardianname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_parenthandbookgiven",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_parenthandbookgiven",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_perpetratorinformedaboutallegations",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_perpetratorinformedaboutallegations",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_perpetratorinterviewcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_perpetratorinterviewcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_perpetratorsummaryid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_perpetratorsummaryid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_perpetratorsummaryidname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_perpetratorsummaryidname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_personinformednote",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_personinformednote",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_personvalidationstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_personvalidationstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_phydefecthandicapdelayedphydev",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_phydefecthandicapdelayedphydev",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_physicallydisabled",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_physicallydisabled",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_physicallydisableddefectshandicaps",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_physicallydisableddefectshandicaps",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_placementdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_placementdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_placementreason",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_placementreason",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_placementstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_placementstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_plan504",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_plan504",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_planofcarehasmeasurableoutcomes",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_planofcarehasmeasurableoutcomes",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_planofcaremeetingdapnotecompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_planofcaremeetingdapnotecompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_planofsafecare",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_planofsafecare",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_planp",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_planp",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_pocmeetings",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_pocmeetings",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_pocmeetingst",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_pocmeetingst",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_pocrevisedandupdated",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_pocrevisedandupdated",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_preliminaryhomestudycompleteddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_preliminaryhomestudycompleteddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_presentingissues",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_presentingissues",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_preventionprogramother",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_preventionprogramother",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_previousowner",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_previousowner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_primarycaregiverlookup",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_primarycaregiverlookup",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_primarycaregiverlookupname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_primarycaregiverlookupname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_primarycaregivermemberofmilitary",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_primarycaregivermemberofmilitary",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_primarycaregivername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_primarycaregivername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_priority",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_priority",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_prioritydecisionoverridereason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_prioritydecisionoverridereason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_priorityoverride",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_priorityoverride",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_priorityoverridedecision",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_priorityoverridedecision",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_progressreviews",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_progressreviews",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_proposedplan",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_proposedplan",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providerlastnameorganizationname",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_providerlastnameorganizationname",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providerlastnameorganizationnamename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_providerlastnameorganizationnamename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providerlastnameorganizationnameyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_providerlastnameorganizationnameyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providerprogressreviews",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_providerprogressreviews",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providertype",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_providertype",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_providertypename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_providertypename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_racialoriginalbackground",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_racialoriginalbackground",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_reasonforassignment",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_reasonforassignment",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_reccocasedisposition",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_reccocasedisposition",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_reccofamilyrisklvlandcasedispo",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_reccofamilyrisklvlandcasedispo",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_reccosdmrecommendation",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_reccosdmrecommendation",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_reccosdmrisklevel",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_reccosdmrisklevel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_receivingstate",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_receivingstate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_recommendations",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_recommendations",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_recordtype",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_recordtype",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_recordtypename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_recordtypename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralapprovalstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_referralapprovalstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referraldate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_referraldate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralother",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_referralother",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralpacketrecipient",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_referralpacketrecipient",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralpacketsentdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_referralpacketsentdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralsource",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_referralsource",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referralstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_referralstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referraltolawenforcementanddoj",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_referraltolawenforcementanddoj",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_referredtopreventionprogram",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_referredtopreventionprogram",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_registrationdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_registrationdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_regulation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_regulation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcaselookup",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_relatedcaselookup",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcaselookupname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedcaselookupname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcasesupervisor",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_relatedcasesupervisor",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcasesupervisorname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedcasesupervisorname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcasesupervisoryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedcasesupervisoryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcaseworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_relatedcaseworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcaseworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedcaseworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedcaseworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedcaseworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relatedservices",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_relatedservices",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_relativenotificationletters",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_relativenotificationletters",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_requiressupervisoroverride",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_requiressupervisoroverride",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_responseprioritydecision",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_responseprioritydecision",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_revisedpocmeetingdapnotecompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_revisedpocmeetingdapnotecompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_revisedpocmeetingdapnotecompletedt",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_revisedpocmeetingdapnotecompletedt",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_riskassessmentcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_riskassessmentcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_riskreassessmentcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_riskreassessmentcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_safetyassessmentscompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_safetyassessmentscompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_schedulephyexamin2weeksofplcmt",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_schedulephyexamin2weeksofplcmt",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_schoolyear",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_schoolyear",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_secondarycaregiver",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_secondarycaregiver",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_secondarycaregivermemberofmilitary",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_secondarycaregivermemberofmilitary",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_secondarycaregivername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_secondarycaregivername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_secondarycaregivernamec",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_secondarycaregivernamec",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_sendingstate",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_sendingstate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_serviceauthorizations",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_serviceauthorizations",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_serviceauthorizationsarecurrent",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_serviceauthorizationsarecurrent",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_servicetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_servicetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_specialedexitdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_specialedexitdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_specialedexitreason",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_specialedexitreason",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_status",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_status",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_strengthsandneedsassessmentcompleted",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_strengthsandneedsassessmentcompleted",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_studentschoolother",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_studentschoolother",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_subject",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_subject",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_supclosureprimaryreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_supclosureprimaryreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_supclosuresecondaryreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_supclosuresecondaryreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_supervisorownercheck",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_supervisorownercheck",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_sustainabletipdevelopeddistributed",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_sustainabletipdevelopeddistributed",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_systemcreated",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_systemcreated",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_systemsupervisorreview",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_systemsupervisorreview",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_tdmmeetingdocumented",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_tdmmeetingdocumented",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_teamleadertaskcreated",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_teamleadertaskcreated",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_telephoneofserviceagency",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_telephoneofserviceagency",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_testingaccommodations",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_testingaccommodations",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_tierassignment",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_tierassignment",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_tippocsenttoteam",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_tippocsenttoteam",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_tipreviewedbyteam",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_tipreviewedbyteam",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_tipsignedbysupervisor",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_tipsignedbysupervisor",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_transitiontaskrecordtypeid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_transitiontaskrecordtypeid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_treatmentassigmentstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_treatmentassigmentstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_treatmentplannotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_treatmentplannotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_treatmentplanreviewdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_treatmentplanreviewdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_treatmentplanreviewedwithclient",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_treatmentplanreviewedwithclient",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_treatmentrecommendation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_treatmentrecommendation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_type",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_type",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_typeofconsultation",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_typeofconsultation",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_updateclientaddressesandphonenumber",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_updateclientaddressesandphonenumber",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_userinvolvedcase",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xg_userinvolvedcase",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_visuallyhearingimpaired",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_visuallyhearingimpaired",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_visuallyhearingimpairedcaregiver",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_visuallyhearingimpairedcaregiver",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_workeraddress",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_workeraddress",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_workerdateassigned",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_workerdateassigned",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_workername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_workername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_workernotes",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_workernotes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_workerphonenumber",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_workerphonenumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_abridgereasons",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_abridgereasons",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_acknowledged",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_acknowledged",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_acknowledgedby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_acknowledgedby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_acknowledgedbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_acknowledgedbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_acknowledgedbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_acknowledgedbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_acknowledgeddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_acknowledgeddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_addressline1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_addressline1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_addressline2",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_addressline2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_addresstype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_addresstype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptioninformation",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_adoptioninformation",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptioninformationname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_adoptioninformationname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptionsubtype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_adoptionsubtype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname1",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname1",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname1name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname1name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname1yominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname1yominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname2",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname2",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname2name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname2name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_adoptiveparentorguardianname2yominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_adoptiveparentorguardianname2yominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_afcarsinformationcheck",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_afcarsinformationcheck",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_afcarsinformationcheckname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_afcarsinformationcheckname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_appealdecision",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_appealdecision",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_appealrequestdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_appealrequestdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_appealtype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_appealtype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_assistanceagreementcounty",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_assistanceagreementcounty",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_assistanceagreementstate",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_assistanceagreementstate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_associatedcasepersoncases",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_associatedcasepersoncases",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_caseid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_caseidname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_caseidname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_caseperson",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_caseperson",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casepersonname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_casepersonname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casepersonyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_casepersonyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casesubtype",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_casesubtype",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casesubtypename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_casesubtypename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casetransferflag",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_casetransferflag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casetype",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_casetype",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_casetypename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_casetypename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_city",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_city",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clientid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_clientid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clientidname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_clientidname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clientidyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_clientidyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clinicalworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_clinicalworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clinicalworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_clinicalworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_clinicalworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_clinicalworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_contactsdoctors",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_contactsdoctors",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_contactsfriendsoffamily",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_contactsfriendsoffamily",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_contactslocallawenforcement",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_contactslocallawenforcement",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_county",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_county",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_currentstage",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_currentstage",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_datecompleted",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_datecompleted",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_dupuy",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_dupuy",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_eligibilitydate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_eligibilitydate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_emailsendingflag",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_emailsendingflag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_fairhearingdecisiondate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_fairhearingdecisiondate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_fairhearingrequestdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_fairhearingrequestdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_fictivekin",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_fictivekin",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_homestudyduedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_homestudyduedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_homestudyrequesttype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_homestudyrequesttype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_incompletepacketduedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_incompletepacketduedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_interruptiondate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_interruptiondate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_interruptionreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_interruptionreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_investigationdetail",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_investigationdetail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_investigationoutcome",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_investigationoutcome",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_mailtrackinginfo",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_mailtrackinginfo",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_modificationnarrative",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_modificationnarrative",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_mou",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_mou",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_moudecisionduedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_moudecisionduedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_nchid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_nchid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_nooftasks",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_nooftasks",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_nooftasks_date",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_nooftasks_date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_nooftasks_state",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_nooftasks_state",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_notificationdate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_notificationdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_office",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_office",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_officename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_officename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_otherassignedworker",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_otherassignedworker",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_otherstateremoval",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_otherstateremoval",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridecreatedby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_overridecreatedby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridecreatedbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_overridecreatedbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridecreatedbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_overridecreatedbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifiedby",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_overridemodifiedby",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifiedbyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_overridemodifiedbyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifiedbyyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_overridemodifiedbyyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_participatingstate",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_participatingstate",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_personrelatedid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_personrelatedid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_personrelatedidname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_personrelatedidname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_personrelatedidyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_personrelatedidyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_posadoptiveclientname",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_posadoptiveclientname",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_posadoptiveclientnamename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_posadoptiveclientnamename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_posadoptiveclientnameyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_posadoptiveclientnameyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_previousregion",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_previousregion",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_previousworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_previousworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_previousworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_previousworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_previousworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_previousworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_private",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_private",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_provisional",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_provisional",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_quarterlysupervisionlastreceiveddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_quarterlysupervisionlastreceiveddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_queue",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_queue",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_queuename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_queuename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_reasonforconfidentiality",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_reasonforconfidentiality",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_receivingcounty",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_receivingcounty",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_receivingcountyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_receivingcountyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_receivingstate",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_receivingstate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_recordexpunged",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_recordexpunged",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_region",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_region",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_regionoffice",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_regionoffice",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_regionofficename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_regionofficename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_regionsupervisorapproved",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_regionsupervisorapproved",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_regulation7provisionaldecisionduedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_regulation7provisionaldecisionduedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_residentialworker",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_residentialworker",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_residentialworkername",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_residentialworkername",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_residentialworkeryominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_residentialworkeryominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_scenario",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_scenario",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_sendingagency",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_sendingagency",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_sendingagencyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_sendingagencyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_sendingcounty",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_sendingcounty",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_sendingcountyname",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_sendingcountyname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_sendingstate",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_sendingstate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_state",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_state",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_transferreason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_transferreason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribalremoval",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_tribalremoval",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribalrepresentative",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_tribalrepresentative",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribalrepresentativename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_tribalrepresentativename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribalrepresentativeyominame",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_tribalrepresentativeyominame",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribe",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xgi_tribe",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_tribename",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_tribename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_unit",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_unit",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_urgent",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "xgi_urgent",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_zipcode",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xgi_zipcode",
+									"type": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
