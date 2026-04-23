@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "5. TARGET"
+			"name": "5. OCEANS"
 		},
 		"annotations": [],
 		"type": "CommonDataServiceForAppsEntity",
