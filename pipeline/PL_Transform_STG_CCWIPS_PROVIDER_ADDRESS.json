@@ -58,7 +58,7 @@
 			}
 		},
 		"folder": {
-			"name": "2. STAGING"
+			"name": "2. LND_TO_STG"
 		},
 		"annotations": [
 			"ADF Mapping Data Flow",
