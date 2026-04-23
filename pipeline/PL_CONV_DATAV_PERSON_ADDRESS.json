@@ -45,7 +45,7 @@
 								"source": {
 									"name": "createdbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "createdbyname",
@@ -56,7 +56,7 @@
 								"source": {
 									"name": "createdbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "createdbyyominame",
@@ -67,7 +67,7 @@
 								"source": {
 									"name": "createdon",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								},
 								"sink": {
 									"name": "createdon",
@@ -89,7 +89,7 @@
 								"source": {
 									"name": "createdonbehalfbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "createdonbehalfbyname",
@@ -100,7 +100,7 @@
 								"source": {
 									"name": "createdonbehalfbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "createdonbehalfbyyominame",
@@ -133,7 +133,7 @@
 								"source": {
 									"name": "modifiedbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "modifiedbyname",
@@ -144,7 +144,7 @@
 								"source": {
 									"name": "modifiedbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "modifiedbyyominame",
@@ -155,7 +155,7 @@
 								"source": {
 									"name": "modifiedon",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								},
 								"sink": {
 									"name": "modifiedon",
@@ -177,7 +177,7 @@
 								"source": {
 									"name": "modifiedonbehalfbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "modifiedonbehalfbyname",
@@ -188,7 +188,7 @@
 								"source": {
 									"name": "modifiedonbehalfbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "modifiedonbehalfbyyominame",
@@ -199,7 +199,7 @@
 								"source": {
 									"name": "overriddencreatedon",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								},
 								"sink": {
 									"name": "overriddencreatedon",
@@ -221,7 +221,7 @@
 								"source": {
 									"name": "owneridname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "owneridname",
@@ -232,7 +232,7 @@
 								"source": {
 									"name": "owneridtype",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "owneridtype",
@@ -243,7 +243,7 @@
 								"source": {
 									"name": "owneridyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "owneridyominame",
@@ -265,7 +265,7 @@
 								"source": {
 									"name": "owningbusinessunitname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "owningbusinessunitname",
@@ -341,8 +341,8 @@
 							{
 								"source": {
 									"name": "versionnumber",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"type": "Double",
+									"physicalType": "float"
 								},
 								"sink": {
 									"name": "versionnumber",
@@ -352,8 +352,8 @@
 							{
 								"source": {
 									"name": "xg_address",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
 								},
 								"sink": {
 									"name": "xg_address",
@@ -361,30 +361,55 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xg_addressname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_addressname",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_addresstype",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_addresstype",
 									"type": "Int32"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_apartmentnumber",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_apartmentnumber",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_city",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_city",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_completeaddress",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_completeaddress",
 									"type": "String"
@@ -402,6 +427,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xg_country",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_country",
 									"type": "String"
@@ -410,8 +440,8 @@
 							{
 								"source": {
 									"name": "xg_county",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xg_county",
@@ -422,7 +452,7 @@
 								"source": {
 									"name": "xg_externalid",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xg_externalid",
@@ -430,12 +460,22 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xg_latitude",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_latitude",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_longitude",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_longitude",
 									"type": "String"
@@ -445,7 +485,7 @@
 								"source": {
 									"name": "xg_name",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xg_name",
@@ -453,36 +493,66 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xg_person",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
 								"sink": {
 									"name": "xg_person",
 									"type": "Guid"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_personaddressid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
 								"sink": {
 									"name": "xg_personaddressid",
 									"type": "Guid"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_personname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_personname",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_personyominame",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_personyominame",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_poboxnumber",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_poboxnumber",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_state",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_state",
 									"type": "String"
@@ -491,8 +561,8 @@
 							{
 								"source": {
 									"name": "xg_status",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xg_status",
@@ -500,42 +570,77 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xg_street1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_street1",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_street1hyperlink",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_street1hyperlink",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_street1soundexkey",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_street1soundexkey",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_street2",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_street2",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_street2soundexkey",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_street2soundexkey",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_streetnumber",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_streetnumber",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xg_zip",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xg_zip",
 									"type": "String"
@@ -544,8 +649,8 @@
 							{
 								"source": {
 									"name": "xgi_addresstype",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_addresstype",
@@ -553,24 +658,44 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xgi_attention",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xgi_attention",
 									"type": "String"
 								}
 							},
 							{
+								"source": {
+									"name": "xgi_country",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xgi_country",
 									"type": "Int32"
 								}
 							},
 							{
+								"source": {
+									"name": "xgi_enddate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
 								"sink": {
 									"name": "xgi_enddate",
 									"type": "DateTime"
 								}
 							},
 							{
+								"source": {
+									"name": "xgi_lastknownaddress",
+									"type": "String",
+									"physicalType": "varchar"
+								},
 								"sink": {
 									"name": "xgi_lastknownaddress",
 									"type": "String"
@@ -591,7 +716,7 @@
 								"source": {
 									"name": "xgi_overridecreatedbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_overridecreatedbyname",
@@ -602,7 +727,7 @@
 								"source": {
 									"name": "xgi_overridecreatedbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_overridecreatedbyyominame",
@@ -624,7 +749,7 @@
 								"source": {
 									"name": "xgi_overridemodifiedbyname",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_overridemodifiedbyname",
@@ -635,7 +760,7 @@
 								"source": {
 									"name": "xgi_overridemodifiedbyyominame",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_overridemodifiedbyyominame",
@@ -646,7 +771,7 @@
 								"source": {
 									"name": "xgi_overridemodifieddate",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								},
 								"sink": {
 									"name": "xgi_overridemodifieddate",
@@ -654,6 +779,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "xgi_startdate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
 								"sink": {
 									"name": "xgi_startdate",
 									"type": "DateTime"
@@ -662,8 +792,8 @@
 							{
 								"source": {
 									"name": "xgi_state",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xgi_state",
