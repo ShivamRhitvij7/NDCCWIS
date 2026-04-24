@@ -3,11 +3,17 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CCWIPS_PROVIDER_ADDRESS",
+				"name": "FRAME_CASE_PARTICIPANT",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "CCWIPS_PROVIDER",
+						"activity": "FRAME_CASE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "FRAME_Person",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -24,14 +30,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT TOP (1000) [CCWIPS_PROVIDER_ADDRESS_ID]\n      ,[CCWIPS_PROVIDER_ID]\n      ,[ADDR_TYPE_CD]\n      ,[PRMRY_IND]\n      ,[ADDR_STS_CD]\n      ,[STR_NBR]\n      ,[STR_NM]\n      ,[APT_NBR]\n      ,[CITY_NM]\n      ,[ST_CD]\n      ,[ZIP_CD]\n      ,[ZIP_EXT]\n      ,[CNTY_CD]\n      ,[CNTRY_CD]\n      ,[LAT_VAL]\n      ,[LONG_VAL]\n      ,[EFF_START_DT]\n      ,[EFF_END_DT]\n      ,[REC_STS_CD]\n      ,[CRT_TS]\n      ,[UPD_TS]\n      ,[CRT_USER_ID]\n      ,[UPD_USER_ID]\n      ,[LOAD_BATCH_ID]\n      ,[LOAD_DATE]\n      ,[SOURCE_FILE_NAME]\n      ,[ROW_HASH]\n  FROM [LANDING].[CCWIPS_PROVIDER_ADDRESS] where load_date >='2024-11-01 07:00:00.0000000'\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "truncate table STAGING.CCWIPS_PROVIDER_ADDRESS;",
-						"writeBehavior": "insert",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
 						"sqlWriterUseTableLock": false,
 						"disableMetricsCollection": false
 					},
@@ -47,23 +54,19 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_LND_CCWIPS_PROVIDER_ADDRESS_SQL",
-						"type": "DatasetReference",
-						"parameters": {
-							"SchemaName": "LANDING",
-							"TableName": "CCWIPS_PROVIDER_ADDRESS"
-						}
+						"referenceName": "DS_LND_FRAME_CASE_PARTICIPANT_SQL",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+						"referenceName": "DS_STG_FRAME_CASE_PARTICIPANT",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "CCWIPS_PROVIDER",
+				"name": "FRAME_CASE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -77,14 +80,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT TOP (20) [CCWIPS_PROVIDER_ID]\n      ,[PRVDR_NBR]\n      ,[FAC_ID]\n      ,[LIC_NBR]\n      ,[PRVDR_NM]\n      ,[PRVDR_TYPE_CD]\n      ,[PRVDR_SUB_TYPE_CD]\n      ,[LIC_STS_CD]\n      ,[LIC_EFF_DT]\n      ,[LIC_EXP_DT]\n      ,[MAX_CAPACITY]\n      ,[CURR_CENSUS]\n      ,[AGE_RNG_LOW]\n      ,[AGE_RNG_HIGH]\n      ,[GENDER_ACCEPT_CD]\n      ,[SPCL_NEEDS_IND]\n      ,[ICWA_CERT_IND]\n      ,[SPANISH_LANG_IND]\n      ,[PRMRY_CNTCT_FIRST_NM]\n      ,[PRMRY_CNTCT_LAST_NM]\n      ,[PH_NBR]\n      ,[PH_EXT]\n      ,[EMAIL_ADDR]\n      ,[CNTY_CD]\n      ,[ASSIGNED_WORKER_ID]\n      ,[PRVDR_STS_CD]\n      ,[REC_STS_CD]\n      ,[CRT_TS]\n      ,[UPD_TS]\n      ,[CRT_USER_ID]\n      ,[UPD_USER_ID]\n      ,[LOAD_BATCH_ID]\n      ,[LOAD_DATE]\n      ,[SOURCE_FILE_NAME]\n      ,[ROW_HASH]\n  FROM [LANDING].[CCWIPS_PROVIDER]\n where load_date >='2024-11-01 07:00:00.0000000'\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "truncate table STAGING.CCWIPS_PROVIDER;",
-						"writeBehavior": "insert",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
 						"sqlWriterUseTableLock": false,
 						"disableMetricsCollection": false
 					},
@@ -100,17 +104,63 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_LND_CCWIPS_PROVIDER_SQL",
-						"type": "DatasetReference",
-						"parameters": {
-							"SchemaName": "LANDING",
-							"TableName": "CCWIPS_PROVIDER"
-						}
+						"referenceName": "DS_STG_FRAME_CASE",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_STG_CCWIPS_PROVIDER",
+						"referenceName": "DS_STG_FRAME_CASE",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "FRAME_Person",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_STG_FRAME_PERSON",
 						"type": "DatasetReference"
 					}
 				]
