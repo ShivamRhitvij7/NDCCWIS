@@ -267,7 +267,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT* FROM [STAGING].[PROFILING_RULES];",
+						"sqlReaderQuery": "SELECT* FROM [STAGING].[PROFILING_RULES] where [IS_ACTIVE]=1 ;",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
