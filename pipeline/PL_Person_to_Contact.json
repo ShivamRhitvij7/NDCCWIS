@@ -32,18 +32,6 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "contactid",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "contactid",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								}
-							},
-							{
-								"source": {
 									"name": "emailaddress1",
 									"type": "String",
 									"physicalType": "varchar"
