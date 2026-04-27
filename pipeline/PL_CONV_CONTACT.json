@@ -139,8 +139,7 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "owneridtype",
-									"type": "String"
+									"name": "ownerid@EntityReference"
 								}
 							},
 							{
@@ -161,8 +160,7 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "parentcustomeridtype",
-									"type": "String"
+									"name": "parentcustomerid@EntityReference"
 								}
 							},
 							{
