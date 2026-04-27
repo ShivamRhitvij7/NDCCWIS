@@ -1,0 +1,58 @@
+{
+	"name": "PL_Person_to_Contact",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\n      [PERSON_NUMBER] as xgi_externalid\n  --  ,[SSN_ENCRYPTED] as xg_ssntext\n      ,cast([SSN_ENCRYPTED] as varchar(11)) as xg_ssntext\n      ,[FIRST_NAME] as firstname\n      ,[MIDDLE_NAME] as middlename\n      ,[LAST_NAME] as  lastname\n      ,[SUFFIX] as suffix\n      ,[DATE_OF_BIRTH]as xgi_dateofbirth\n      ,[DATE_OF_DEATH] as xg_dateofdeath\n      ,[PRIMARY_PHONE] as mobilephone\n      ,[FRAME_CREATED_DATE] as overriddencreatedon\n      ,[FRAME_MODIFIED_DATE] as xgi_overridemodifieddate\n      ,EMAIL_ADDRESS as emailaddress1\n      ,case\n        WHEN UPPER(LTRIM(RTRIM(GENDER_CODE))) IN ('M','MALE') THEN 1\n        WHEN UPPER(LTRIM(RTRIM(GENDER_CODE))) IN ('F','FEMALE') THEN 2\n       else NULL\n       end as gendercode\n     , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId\n   ,'systemuser' AS OwnerIdType\n ,  CAST('85dae142-0ad8-ef11-8ee9-000d3a185ee5' AS uniqueidentifier) AS parentcustomerid\n  , 'account'         AS parentcustomeridType\n  FROM [STAGING].[FRAME_PERSON]",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_CONV_CONTACT",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "3. STG_TO_CONV"
+		},
+		"annotations": []
+	}
+}
