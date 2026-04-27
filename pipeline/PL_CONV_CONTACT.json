@@ -24,7 +24,10 @@
 					"sink": {
 						"type": "CommonDataServiceForAppsSink",
 						"writeBatchSize": 10,
-						"writeBehavior": "upsert"
+						"writeBehavior": "upsert",
+						"ignoreNullValues": false,
+						"alternateKeyName": "xgi_externalid",
+						"bypassPowerAutomateFlows": false
 					},
 					"enableStaging": false,
 					"translator": {
