@@ -235,6 +235,9 @@
 								}
 							},
 							{
+								"source": {
+									"name": "contactid"
+								},
 								"sink": {
 									"name": "contactid",
 									"type": "Guid",
