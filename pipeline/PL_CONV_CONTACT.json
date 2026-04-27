@@ -187,17 +187,6 @@
 							},
 							{
 								"source": {
-									"name": "xg_ssntext",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "xg_ssntext",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"name": "xgi_dateofbirth",
 									"type": "DateTime",
 									"physicalType": "datetime"
