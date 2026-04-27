@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n    xgi_externalid,\r\n    xg_ssntext,\r\n    firstname,\r\n    middlename,\r\n    lastname,\r\n    suffix,\r\n    xgi_dateofbirth,\r\n    xg_dateofdeath,\r\n    mobilephone,\r\n    overriddencreatedon,\r\n    xgi_overridemodifieddate,\r\n    emailaddress1,\r\n    gendercode,\r\n    OwnerId,\r\n    OwnerIdType,\r\n    parentcustomerid,\r\n    parentcustomeridType\r\nFROM [CONVERSION].[contact]",
+						"sqlReaderQuery": "SELECT\r\n    Newid() as contactid ,\r\n    xgi_externalid,\r\n    xg_ssntext,\r\n    firstname,\r\n    middlename,\r\n    lastname,\r\n    suffix,\r\n    xgi_dateofbirth,\r\n    xg_dateofdeath,\r\n    mobilephone,\r\n    overriddencreatedon,\r\n    xgi_overridemodifieddate,\r\n    emailaddress1,\r\n    gendercode,\r\n    OwnerId,\r\n    OwnerIdType,\r\n    parentcustomerid,\r\n    parentcustomeridType\r\nFROM [CONVERSION].[contact]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -33,6 +33,17 @@
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
+							{
+								"source": {
+									"name": "contactid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "contactid",
+									"type": "Guid"
+								}
+							},
 							{
 								"source": {
 									"name": "emailaddress1",
@@ -128,7 +139,8 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "ownerid@EntityReference"
+									"name": "owneridtype",
+									"type": "String"
 								}
 							},
 							{
@@ -149,7 +161,8 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "parentcustomerid@EntityReference"
+									"name": "parentcustomeridtype",
+									"type": "String"
 								}
 							},
 							{
