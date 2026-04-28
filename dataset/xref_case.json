@@ -1,0 +1,25 @@
+{
+	"name": "xref_case",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "xg_caseid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_externalid",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "CONVERSION",
+			"table": "xref_xg_case"
+		}
+	}
+}
