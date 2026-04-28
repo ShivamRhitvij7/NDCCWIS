@@ -30,6 +30,128 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "ownerid@EntityReference"
+								}
+							},
+							{
+								"source": {
+									"name": "statuscode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "statuscode",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseclosedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_caseclosedate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_caseid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseopendate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xg_caseopendate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closurereason",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_closurereason",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_externalid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
