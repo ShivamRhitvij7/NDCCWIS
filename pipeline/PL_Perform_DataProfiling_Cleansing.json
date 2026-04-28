@@ -1,5 +1,5 @@
 {
-	"name": "PL_DataProfiling",
+	"name": "PL_Perform_DataProfiling_Cleansing",
 	"properties": {
 		"description": "Data Profiling Framework: Validates FRAME_PERSON, FRAME_CASE, FRAME_CASE_PARTICIPANT tables through 10 profiling rules, cleanses fixable records, re-validates, and generates summary report.",
 		"activities": [
@@ -392,7 +392,7 @@
 			}
 		},
 		"folder": {
-			"name": "2. LND_TO_STG/Profiling"
+			"name": "2. LND_TO_STG"
 		},
 		"annotations": []
 	}

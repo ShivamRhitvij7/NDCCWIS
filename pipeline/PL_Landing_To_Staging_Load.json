@@ -1,5 +1,5 @@
 {
-	"name": "PL_LND_TO_STG_conversion_Criteria",
+	"name": "PL_Landing_To_Staging_Load",
 	"properties": {
 		"activities": [
 			{
