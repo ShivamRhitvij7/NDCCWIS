@@ -68,18 +68,6 @@
 							},
 							{
 								"source": {
-									"name": "statuscode",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "statuscode",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
 									"name": "xg_caseclosedate",
 									"type": "Date",
 									"physicalType": "date"
