@@ -128,7 +128,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "xref_case",
+						"referenceName": "CONV_xref_xg_case",
 						"type": "DatasetReference"
 					}
 				]

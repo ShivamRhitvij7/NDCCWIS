@@ -5,6 +5,9 @@
 			"referenceName": "LS_COVNERSION_SQL",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "4. CONVERSION"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
