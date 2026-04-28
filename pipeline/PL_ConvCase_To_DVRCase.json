@@ -1,6 +1,7 @@
 {
-	"name": "PL_Case_To_Case",
+	"name": "PL_ConvCase_To_DVRCase",
 	"properties": {
+		"description": "Pipeline to copy data from Conversion Schema Case table to Dynamics case table",
 		"activities": [
 			{
 				"name": "CNV_CaseToCase",
@@ -17,7 +18,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n      [CASE_NUMBER] as [xg_externalid]\r\n      ,[CASE_TYPE] as xg_casetype\r\n  --    ,[CASE_STATUS] as statuscode  -- we need case statement \r\n     ,[OPEN_DATE] as xg_caseopendate\r\n      ,[CLOSE_DATE] as xg_caseclosedate\r\n      ,[CLOSE_REASON] as xg_closurereason\r\n        ,[FRAME_CREATED_DATE] as overriddencreatedon\r\n      ,[FRAME_MODIFIED_DATE] as xgi_overridemodifieddate\r\n       , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId\r\n   ,'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE]",
+						"sqlReaderQuery": "SELECT\r\n      [CASE_NUMBER] as [xg_externalid]\r\n      ,[CASE_TYPE] as xg_casetype\r\n      ,[CASE_STATUS] as statuscode  -- we need case statement \r\n     ,[OPEN_DATE] as xg_caseopendate\r\n      ,[CLOSE_DATE] as xg_caseclosedate\r\n      ,[CLOSE_REASON] as xg_closurereason\r\n        ,[FRAME_CREATED_DATE] as overriddencreatedon\r\n      ,[FRAME_MODIFIED_DATE] as xgi_overridemodifieddate\r\n       , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId\r\n   ,'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -173,7 +174,7 @@
 			}
 		],
 		"folder": {
-			"name": "3. STG_TO_CONV"
+			"name": "4. CONV_TO_DYNAMICS_BKP"
 		},
 		"annotations": []
 	}
