@@ -18,140 +18,18 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n      [CASE_NUMBER] as [xg_externalid]\r\n      ,[CASE_TYPE] as xg_casetype\r\n      ,[CASE_STATUS] as statuscode  -- we need case statement \r\n     ,[OPEN_DATE] as xg_caseopendate\r\n      ,[CLOSE_DATE] as xg_caseclosedate\r\n      ,[CLOSE_REASON] as xg_closurereason\r\n        ,[FRAME_CREATED_DATE] as overriddencreatedon\r\n      ,[FRAME_MODIFIED_DATE] as xgi_overridemodifieddate\r\n       , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId\r\n   ,'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE]",
+						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    statuscode,\r\n    xg_caseopendate,\r\n    xg_caseclosedate,\r\n    xg_closurereason,\r\n    overriddencreatedon,\r\n    xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "CommonDataServiceForAppsSink",
+						"writeBatchSize": 10,
+						"writeBehavior": "upsert"
 					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "overriddencreatedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "overriddencreatedon",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								}
-							},
-							{
-								"source": {
-									"name": "OwnerId",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "ownerid",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								}
-							},
-							{
-								"source": {
-									"name": "OwnerIdType",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "owneridtype",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "statuscode",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "statuscode",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_caseclosedate",
-									"type": "Date",
-									"physicalType": "date"
-								},
-								"sink": {
-									"name": "xg_caseclosedate",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_caseopendate",
-									"type": "Date",
-									"physicalType": "date"
-								},
-								"sink": {
-									"name": "xg_caseopendate",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_casetype",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "xg_casetype",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_closurereason",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "xg_closurereason",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_externalid",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "xg_externalid",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -161,13 +39,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_STG_FRAME_CASE",
+						"referenceName": "DS_CONV_CASE",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_CONV_CASE",
+						"referenceName": "DS_DATAVS_CASE",
 						"type": "DatasetReference"
 					}
 				]
