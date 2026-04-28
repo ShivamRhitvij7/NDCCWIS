@@ -400,9 +400,13 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     mapColumn(",
-				"          each(match(ERROR_FUNCTION('')),",
-				"               ERROR_FUNCTION('') = $$),",
-				"          {} = accountid",
+				"          xgi_externalid,",
+				"          firstname,",
+				"          middlename,",
+				"          lastname,",
+				"          suffix,",
+				"          xgi_dateofbirth,",
+				"          xg_dateofdeath",
 				"     )) ~> DSCONTACT"
 			]
 		}
