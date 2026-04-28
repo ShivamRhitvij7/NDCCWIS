@@ -26,7 +26,6 @@
 						"writeBatchSize": 10,
 						"writeBehavior": "upsert",
 						"ignoreNullValues": false,
-						"alternateKeyName": "xgi_externalid",
 						"bypassPowerAutomateFlows": false
 					},
 					"enableStaging": false,
