@@ -59,8 +59,7 @@
 									"physicalType": "nvarchar"
 								},
 								"sink": {
-									"name": "owneridtype",
-									"type": "String"
+									"name": "ownerid@EntityReference"
 								}
 							},
 							{
