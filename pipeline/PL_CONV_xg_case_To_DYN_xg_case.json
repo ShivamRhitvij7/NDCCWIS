@@ -1,10 +1,10 @@
 {
-	"name": "PL_ConvCase_To_DVRCase",
+	"name": "PL_CONV_xg_case_To_DYN_xg_case",
 	"properties": {
 		"description": "Pipeline to copy data from Conversion Schema Case table to Dynamics case table",
 		"activities": [
 			{
-				"name": "CNV_CaseToCase",
+				"name": "PL_Case_Load",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -152,7 +152,7 @@
 			}
 		],
 		"folder": {
-			"name": "4. CONV_TO_DYNAMICS_BKP"
+			"name": "4. CONV_TO_DYNAMICS"
 		},
 		"annotations": []
 	}

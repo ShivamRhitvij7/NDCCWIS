@@ -12,7 +12,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_CONV_CONTACT",
+						"referenceName": "PL_CONV_contact_To_DYN_contact",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
