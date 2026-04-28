@@ -65,17 +65,6 @@
 							},
 							{
 								"source": {
-									"name": "statuscode",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "statuscode",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
 									"name": "xg_caseclosedate",
 									"type": "DateTime",
 									"physicalType": "datetime2"
