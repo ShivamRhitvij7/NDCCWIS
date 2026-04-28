@@ -59,7 +59,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CONV_xref_contact",
+						"referenceName": "DS_CONV_xref_contact",
 						"type": "DatasetReference"
 					}
 				]
@@ -128,7 +128,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "CONV_xref_xg_case",
+						"referenceName": "DS_CONV_xref_xg_case",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,5 +1,5 @@
 {
-	"name": "CONV_xref_xg_case",
+	"name": "DS_CONV_xref_xg_case",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",

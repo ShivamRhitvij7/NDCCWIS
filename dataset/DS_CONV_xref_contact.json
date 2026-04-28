@@ -1,5 +1,5 @@
 {
-	"name": "CONV_xref_contact",
+	"name": "DS_CONV_xref_contact",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
