@@ -98,17 +98,6 @@
 							},
 							{
 								"source": {
-									"name": "xg_casetype",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "xg_casetype",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
 									"name": "xg_closurereason",
 									"type": "Int32",
 									"physicalType": "int"
