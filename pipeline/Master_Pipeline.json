@@ -42,7 +42,7 @@
 				}
 			},
 			{
-				"name": "Profiling",
+				"name": "PROFILING",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -69,11 +69,11 @@
 				}
 			},
 			{
-				"name": "CLensing",
+				"name": "CLEANSING",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Profiling",
+						"activity": "PROFILING",
 						"dependencyConditions": [
 							"Succeeded"
 						]
