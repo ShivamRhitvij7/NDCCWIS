@@ -1,0 +1,101 @@
+{
+	"name": "Master_Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "FILE_TO_LANDING",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_CSVFile_To_Landing_Load",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "LANDING_TO_STAGING",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "FILE_TO_LANDING",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Landing_To_Staging_Load",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Profiling",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "LANDING_TO_STAGING",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Perform_DataProfiling",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"SourceSystem": "FRAME_LEGACY",
+						"RunID": "1001"
+					}
+				}
+			},
+			{
+				"name": "CLensing",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Profiling",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Perform_Cleansing",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"SourceSystem": "FRAME_LEGACY",
+						"RunID": "1001"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
