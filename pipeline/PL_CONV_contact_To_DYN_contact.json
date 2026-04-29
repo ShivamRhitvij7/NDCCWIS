@@ -111,17 +111,6 @@
 							},
 							{
 								"source": {
-									"name": "overriddencreatedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "overriddencreatedon",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
 									"name": "OwnerId",
 									"type": "Guid",
 									"physicalType": "uniqueidentifier"
@@ -143,27 +132,6 @@
 							},
 							{
 								"source": {
-									"name": "parentcustomerid",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "parentcustomerid",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "parentcustomeridType",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "parentcustomerid@EntityReference"
-								}
-							},
-							{
-								"source": {
 									"name": "suffix",
 									"type": "String",
 									"physicalType": "varchar"
@@ -204,17 +172,6 @@
 								"sink": {
 									"name": "xgi_externalid",
 									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime"
 								}
 							}
 						],
