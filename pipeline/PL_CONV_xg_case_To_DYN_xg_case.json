@@ -18,7 +18,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]",
+						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    '171060001' as xg_status,\r\n    --statuscode as xg_statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n   'TEST DIVISION' as xg_casenamedivisionwise,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]\r\nwhere xg_casetype ='171060016'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
