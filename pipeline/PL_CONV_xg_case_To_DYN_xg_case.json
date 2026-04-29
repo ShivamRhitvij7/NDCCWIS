@@ -161,17 +161,6 @@
 									"name": "xg_servicetype",
 									"type": "Int32"
 								}
-							},
-							{
-								"source": {
-									"name": "xg_status",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "xg_status",
-									"type": "Int32"
-								}
 							}
 						],
 						"typeConversion": true,
