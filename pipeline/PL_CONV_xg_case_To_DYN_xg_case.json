@@ -18,7 +18,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    '5BE84704-D87F-EF11-AC21-7C1E520257DF' as xg_associatedintake,\r\n    '5BE84704-D87F-EF11-AC21-7C1E520257DF' as xg_originatingintake,\r\n    '171060001' as xg_status,\r\n    --statuscode as xg_statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n   'TEST DIVISION' as xg_casenamedivisionwise,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]\r\nwhere xg_casetype ='171060016'\r\n",
+						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    '171060016'xg_casetype,\r\n    'Investigation'xg_casetypename,\r\n    '5BE84704-D87F-EF11-AC21-7C1E520257DF' as xg_associatedintake,\r\n    '5BE84704-D87F-EF11-AC21-7C1E520257DF' as xg_originatingintake,\r\n    '171060001' as xg_status,\r\n    --statuscode as xg_statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n   'TEST DIVISION' as xg_casenamedivisionwise,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]\r\nwhere xg_casetype ='171060016'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -49,7 +49,19 @@
 									"physicalType": "nvarchar"
 								},
 								"sink": {
-									"name": "ownerid@EntityReference"
+									"name": "owneridtype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_associatedintake",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_associatedintake",
+									"type": "Guid"
 								}
 							},
 							{
@@ -88,8 +100,8 @@
 							{
 								"source": {
 									"name": "xg_casetype",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								},
 								"sink": {
 									"name": "xg_casetype",
@@ -105,6 +117,17 @@
 								"sink": {
 									"name": "xg_externalid",
 									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_originatingintake",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_originatingintake",
+									"type": "Guid"
 								}
 							},
 							{
