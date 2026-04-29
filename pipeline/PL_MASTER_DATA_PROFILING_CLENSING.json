@@ -1,0 +1,58 @@
+{
+	"name": "PL_MASTER_DATA_PROFILING_CLENSING",
+	"properties": {
+		"activities": [
+			{
+				"name": "Profiling",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Perform_DataProfiling",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"SourceSystem": "FRAME_LEGACY",
+						"RunID": "1001"
+					}
+				}
+			},
+			{
+				"name": "CLensing",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Profiling",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Perform_Cleansing",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"SourceSystem": "FRAME_LEGACY",
+						"RunID": "1001"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "2. LND_TO_STG"
+		},
+		"annotations": []
+	}
+}
