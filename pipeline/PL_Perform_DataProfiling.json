@@ -1,5 +1,5 @@
 {
-	"name": "PL_Perform_DataProfiling_Cleansing",
+	"name": "PL_Perform_DataProfiling",
 	"properties": {
 		"description": "Data Profiling Framework: Validates FRAME_PERSON, FRAME_CASE, FRAME_CASE_PARTICIPANT tables through 10 profiling rules, cleanses fixable records, re-validates, and generates summary report.",
 		"activities": [
@@ -116,135 +116,6 @@
 				}
 			},
 			{
-				"name": "Step3_ApplyCleansingLogic",
-				"description": "Perform Auto Cleansing on fixable records. and Transfer unfixable ones ti manual review",
-				"type": "SqlServerStoredProcedure",
-				"dependsOn": [
-					{
-						"activity": "Step2_ExecuteProfilingChecks",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.02:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"storedProcedureName": "[STAGING].[SP_ApplyCleansingLogic]",
-					"storedProcedureParameters": {
-						"RunID": {
-							"value": {
-								"value": "@activity('Step0_LookupRunID').output.firstRow.RunID",
-								"type": "Expression"
-							},
-							"type": "Int32"
-						},
-						"SourceSystem": {
-							"value": {
-								"value": "@pipeline().parameters.SourceSystem",
-								"type": "Expression"
-							},
-							"type": "String"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "LS_COVNERSION_SQL",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Step4_RerunProfilingCleansed",
-				"description": "Re-validate auto cleansed records. Convert cleansed Records into Passed status and convert non fixable records into Failures status",
-				"type": "SqlServerStoredProcedure",
-				"dependsOn": [
-					{
-						"activity": "Step3_ApplyCleansingLogic",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.02:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"storedProcedureName": "[STAGING].[SP_RerunProfilingCleansed]",
-					"storedProcedureParameters": {
-						"RunID": {
-							"value": {
-								"value": "@activity('Step0_LookupRunID').output.firstRow.RunID",
-								"type": "Expression"
-							},
-							"type": "Int32"
-						},
-						"SourceSystem": {
-							"value": {
-								"value": "@pipeline().parameters.SourceSystem",
-								"type": "Expression"
-							},
-							"type": "String"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "LS_COVNERSION_SQL",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Step5_GenerateSummaryReport",
-				"description": "Finalize run log with counts of pass/fail records",
-				"type": "SqlServerStoredProcedure",
-				"dependsOn": [
-					{
-						"activity": "Step4_RerunProfilingCleansed",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.00:30:00",
-					"retry": 1,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"storedProcedureName": "[STAGING].[SP_GenerateSummaryReport]",
-					"storedProcedureParameters": {
-						"RunID": {
-							"value": {
-								"value": "@activity('Step0_LookupRunID').output.firstRow.RunID",
-								"type": "Expression"
-							},
-							"type": "Int32"
-						},
-						"SourceSystem": {
-							"value": {
-								"value": "@pipeline().parameters.SourceSystem",
-								"type": "Expression"
-							},
-							"type": "String"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "LS_COVNERSION_SQL",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "Lookup_PROFILING_RULES",
 				"description": "See the PROFILING_RULES",
 				"type": "Lookup",
@@ -313,51 +184,10 @@
 				}
 			},
 			{
-				"name": "Lookup_Clensing_log",
-				"description": "See the Clensing_log",
-				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "Step3_ApplyCleansingLogic",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT* FROM [STAGING].[CLEANSING_LOG];",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "DS_STG_FRAME_PERSON",
-						"type": "DatasetReference"
-					},
-					"firstRowOnly": false
-				}
-			},
-			{
 				"name": "Lookup_Profiling_logs",
 				"description": "See the profiling logs",
 				"type": "Lookup",
-				"dependsOn": [
-					{
-						"activity": "Step5_GenerateSummaryReport",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
