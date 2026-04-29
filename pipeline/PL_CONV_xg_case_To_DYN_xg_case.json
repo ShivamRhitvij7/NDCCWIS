@@ -18,7 +18,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n     NEWID() as xgi_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]",
+						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    xg_externalid,\r\n    xg_casetype,\r\n    statuscode,\r\n    xg_caseopendate,\r\n--    xg_caseclosedate,\r\n --   xg_closurereason,\r\n    overriddencreatedon,\r\n --   xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM[CONVERSION].[xg_case]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -94,17 +94,6 @@
 								"sink": {
 									"name": "xg_externalid",
 									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "xgi_caseid",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "xgi_caseid",
-									"type": "Guid"
 								}
 							}
 						],
