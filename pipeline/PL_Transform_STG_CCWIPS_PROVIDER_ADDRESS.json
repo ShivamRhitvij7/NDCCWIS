@@ -58,7 +58,7 @@
 			}
 		},
 		"folder": {
-			"name": "2. LND_TO_STG/Profiling"
+			"name": "2. LND_TO_STG/DataFlow"
 		},
 		"annotations": [
 			"ADF Mapping Data Flow",
