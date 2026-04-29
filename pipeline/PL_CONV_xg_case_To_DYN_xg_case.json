@@ -76,12 +76,12 @@
 							},
 							{
 								"source": {
-									"name": "statuscode",
+									"name": "xg_status",
 									"type": "Int32",
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "statuscode",
+									"name": "xg_status",
 									"type": "Int32"
 								}
 							},
