@@ -74,7 +74,7 @@
 			},
 			{
 				"name": "Step2_ExecuteProfilingChecks",
-				"description": "Run all 10 profiling rules and log exceptions to EXCEPTION_LOG",
+				"description": "Run all 5 profiling rules and log exceptions to EXCEPTION_LOG",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
