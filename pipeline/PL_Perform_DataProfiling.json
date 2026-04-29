@@ -182,33 +182,6 @@
 					},
 					"firstRowOnly": false
 				}
-			},
-			{
-				"name": "Lookup_Profiling_logs",
-				"description": "See the profiling logs",
-				"type": "Lookup",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT* FROM [STAGING].[PROFILING_RUN_LOG];",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "DS_STG_FRAME_PERSON",
-						"type": "DatasetReference"
-					},
-					"firstRowOnly": false
-				}
 			}
 		],
 		"parameters": {
