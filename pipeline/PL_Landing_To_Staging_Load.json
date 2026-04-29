@@ -30,7 +30,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from [LANDING].[FRAME_CASE_PARTICIPANT_WRK]",
+						"sqlReaderQuery": "select * from [LANDING].[FRAME_CASE_PARTICIPANT]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
