@@ -19,7 +19,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT ISNULL(MAX(RUN_ID), 0) AS RunID FROM [STAGING].[PROFILING_RUN_LOG];",
+						"sqlReaderQuery": "SELECT ISNULL(MAX(RUN_ID), 1001) AS RunID FROM [STAGING].[PROFILING_RUN_LOG];",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
