@@ -1,5 +1,5 @@
 {
-	"name": "PL_File_To_Landing_Load",
+	"name": "PL_CSVFile_To_Landing_Load",
 	"properties": {
 		"activities": [
 			{
