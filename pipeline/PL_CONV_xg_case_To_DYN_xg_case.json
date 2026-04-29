@@ -33,17 +33,6 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "overriddencreatedon",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								},
-								"sink": {
-									"name": "overriddencreatedon",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
 									"name": "OwnerId",
 									"type": "Guid",
 									"physicalType": "uniqueidentifier"
@@ -116,17 +105,6 @@
 								"sink": {
 									"name": "xgi_caseid",
 									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime",
-									"physicalType": "datetime2"
-								},
-								"sink": {
-									"name": "xgi_overridemodifieddate",
-									"type": "DateTime"
 								}
 							}
 						],
