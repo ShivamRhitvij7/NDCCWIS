@@ -429,7 +429,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from [LANDING].[FRAME_CASE_WRK];",
+						"sqlReaderQuery": "select * from [LANDING].[FRAME_CASE];",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -900,7 +900,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from [LANDING].[FRAME_PERSON_WRK];",
+						"sqlReaderQuery": "select * from [LANDING].[FRAME_PERSON];",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
