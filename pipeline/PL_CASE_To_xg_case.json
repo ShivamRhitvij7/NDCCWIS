@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT\r\n    [CASE_NUMBER] AS [xg_externalid],\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'INVESTIGATION' THEN 171060016\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'CASE MANAGEMENT' THEN 171060024\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PERMANENCY' THEN 171060022\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PRIVATE PERMANENCY' THEN 292460001\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ADOPTION' THEN 171060032\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'EXTENDED FOSTER CARE' THEN 171060028\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'APPEAL' THEN 171060006\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'GUARDIANSHIP' THEN 171060031\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICPC' THEN 171060019\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICAMA' THEN 292460002\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'POST-PERMANENCY SERVICE' THEN 171060020\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'STANDARDS COMPLAINT CASE' THEN 292460000\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PROVIDER SERVICE' THEN 171060033\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'Family Service' THEN 541120001\r\n        ELSE NULL\r\n    END AS xg_casetype,\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'ACTIVE' THEN 1\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'CLOSED' THEN 2\r\n        ELSE NULL\r\n    END AS statuscode,\r\n\r\n    [OPEN_DATE] AS xg_caseopendate,\r\n    [CLOSE_DATE] AS xg_caseclosedate,\r\n    [CLOSE_REASON] AS xg_closurereason,\r\n    [FRAME_CREATED_DATE] AS overriddencreatedon,\r\n    [FRAME_MODIFIED_DATE] AS xgi_overridemodifieddate,\r\n    CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n    'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE] where GOLDEN_RECORD_FLAG='P';\r\n ",
+						"sqlReaderQuery": "SELECT\r\n    [CASE_NUMBER] AS [xg_externalid],\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'INVESTIGATION' THEN 171060016\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'CASE MANAGEMENT' THEN 171060024\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PERMANENCY' THEN 171060022\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PRIVATE PERMANENCY' THEN 292460001\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ADOPTION' THEN 171060032\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'EXTENDED FOSTER CARE' THEN 171060028\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'APPEAL' THEN 171060006\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'GUARDIANSHIP' THEN 171060031\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICPC' THEN 171060019\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICAMA' THEN 292460002\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'POST-PERMANENCY SERVICE' THEN 171060020\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'STANDARDS COMPLAINT CASE' THEN 292460000\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PROVIDER SERVICE' THEN 171060033\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'Family Service' THEN 541120001\r\n        ELSE NULL\r\n    END AS xg_casetype,\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'ACTIVE' THEN 1\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'CLOSED' THEN 2\r\n        ELSE NULL\r\n    END AS statuscode,\r\n\r\n    [OPEN_DATE] AS xg_caseopendate,\r\n    [CLOSE_DATE] AS xg_caseclosedate,\r\n    [FRAME_CREATED_DATE] AS overriddencreatedon,\r\n    [FRAME_MODIFIED_DATE] AS xgi_overridemodifieddate,\r\n    CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n    'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE] where GOLDEN_RECORD_FLAG='P';\r\n ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -112,18 +112,6 @@
 								},
 								"sink": {
 									"name": "xg_casetype",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "xg_closurereason",
-									"type": "String",
-									"physicalType": "varchar"
-								},
-								"sink": {
-									"name": "xg_closurereason",
 									"type": "Int32",
 									"physicalType": "int"
 								}
