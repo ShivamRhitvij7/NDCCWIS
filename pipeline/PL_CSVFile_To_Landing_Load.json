@@ -1,0 +1,72 @@
+{
+	"name": "PL_CSVFile_To_Landing_Load",
+	"properties": {
+		"activities": [
+			{
+				"name": "FRAME_CASE",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Blob_Lnd_FRAME_CASE",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "FRAME_PERSON",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Blob_Lnd_FRAME_PERSON",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "FRAME_PERSON_PARTICIPANT",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "FRAME_PERSON",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "FRAME_CASE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_Blob_Lnd_FRAME_PERSON_PARTICIPANT",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "1. FILE_TO_LND"
+		},
+		"annotations": []
+	}
+}

@@ -1,5 +1,5 @@
 {
-	"name": "DS_STG_FRAME_PERSON",
+	"name": "DS_STG_FRAME_CASE",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
@@ -12,105 +12,110 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "FRAME_PERSON_ID",
+				"name": "FRAME_CASE_ID",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "PERSON_NUMBER",
+				"name": "CASE_NUMBER",
 				"type": "varchar"
 			},
 			{
-				"name": "SSN_ENCRYPTED",
+				"name": "LEGACY_CASE_ID",
 				"type": "varchar"
 			},
 			{
-				"name": "MEDICAID_ID",
+				"name": "CASE_TYPE",
 				"type": "varchar"
 			},
 			{
-				"name": "FIRST_NAME",
+				"name": "CASE_SUBTYPE",
 				"type": "varchar"
 			},
 			{
-				"name": "MIDDLE_NAME",
+				"name": "ALLEGATION_TYPE",
 				"type": "varchar"
 			},
 			{
-				"name": "LAST_NAME",
+				"name": "REFERRAL_SOURCE",
 				"type": "varchar"
 			},
 			{
-				"name": "SUFFIX",
+				"name": "CASE_STATUS",
 				"type": "varchar"
 			},
 			{
-				"name": "DATE_OF_BIRTH",
+				"name": "INTAKE_DATE",
 				"type": "date"
 			},
 			{
-				"name": "DATE_OF_DEATH",
+				"name": "INVESTIGATION_START_DATE",
 				"type": "date"
 			},
 			{
-				"name": "GENDER_CODE",
+				"name": "OPEN_DATE",
+				"type": "date"
+			},
+			{
+				"name": "CLOSE_DATE",
+				"type": "date"
+			},
+			{
+				"name": "CLOSE_REASON",
 				"type": "varchar"
 			},
 			{
-				"name": "RACE_CODE",
+				"name": "RISK_LEVEL",
 				"type": "varchar"
 			},
 			{
-				"name": "SECONDARY_RACE_CODE",
+				"name": "SAFETY_ASSESSMENT",
 				"type": "varchar"
 			},
 			{
-				"name": "ETHNICITY_CODE",
+				"name": "FINDING_CODE",
 				"type": "varchar"
 			},
 			{
-				"name": "PRIMARY_LANGUAGE",
+				"name": "ASSIGNED_WORKER_ID",
 				"type": "varchar"
 			},
 			{
-				"name": "CITIZENSHIP_STATUS",
+				"name": "ASSIGNED_WORKER_NAME",
 				"type": "varchar"
 			},
 			{
-				"name": "MARITAL_STATUS",
+				"name": "SUPERVISOR_ID",
 				"type": "varchar"
 			},
 			{
-				"name": "PERSON_TYPE",
+				"name": "SUPERVISOR_NAME",
 				"type": "varchar"
 			},
 			{
-				"name": "TRIBAL_AFFILIATION",
+				"name": "COUNTY_CODE",
 				"type": "varchar"
 			},
 			{
-				"name": "ICWA_ELIGIBLE_FLAG",
-				"type": "char"
-			},
-			{
-				"name": "EDUCATION_LEVEL",
+				"name": "COUNTY_NAME",
 				"type": "varchar"
 			},
 			{
-				"name": "EMPLOYMENT_STATUS",
+				"name": "OFFICE_CODE",
 				"type": "varchar"
 			},
 			{
-				"name": "PRIMARY_PHONE",
+				"name": "OFFICE_NAME",
 				"type": "varchar"
 			},
 			{
-				"name": "SECONDARY_PHONE",
+				"name": "STATE_CODE",
 				"type": "varchar"
 			},
 			{
-				"name": "EMAIL_ADDRESS",
-				"type": "varchar"
+				"name": "PRIMARY_PERSON_ID",
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "SOURCE_RECORD_STATUS",
@@ -154,15 +159,11 @@
 			{
 				"name": "ROW_HASH",
 				"type": "varchar"
-			},
-			{
-				"name": "GOLDEN_RECORD_FLAG",
-				"type": "char"
 			}
 		],
 		"typeProperties": {
 			"schema": "STAGING",
-			"table": "FRAME_PERSON"
+			"table": "FRAME_CASE"
 		}
 	}
 }

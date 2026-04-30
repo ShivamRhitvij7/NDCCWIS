@@ -1,5 +1,5 @@
 {
-	"name": "DS_STG_FRAME_PERSON",
+	"name": "DS_STG_FRAME_CASE_PARTICIPANT",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
@@ -12,7 +12,7 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "FRAME_PERSON_ID",
+				"name": "FRAME_CASE_PARTICIPANT_ID",
 				"type": "int",
 				"precision": 10
 			},
@@ -21,119 +21,99 @@
 				"type": "varchar"
 			},
 			{
-				"name": "SSN_ENCRYPTED",
+				"name": "CASE_NUMBER",
 				"type": "varchar"
 			},
 			{
-				"name": "MEDICAID_ID",
+				"name": "ROLE_CD",
 				"type": "varchar"
 			},
 			{
-				"name": "FIRST_NAME",
+				"name": "ROLE_DESC",
 				"type": "varchar"
 			},
 			{
-				"name": "MIDDLE_NAME",
-				"type": "varchar"
-			},
-			{
-				"name": "LAST_NAME",
-				"type": "varchar"
-			},
-			{
-				"name": "SUFFIX",
-				"type": "varchar"
-			},
-			{
-				"name": "DATE_OF_BIRTH",
-				"type": "date"
-			},
-			{
-				"name": "DATE_OF_DEATH",
-				"type": "date"
-			},
-			{
-				"name": "GENDER_CODE",
-				"type": "varchar"
-			},
-			{
-				"name": "RACE_CODE",
-				"type": "varchar"
-			},
-			{
-				"name": "SECONDARY_RACE_CODE",
-				"type": "varchar"
-			},
-			{
-				"name": "ETHNICITY_CODE",
-				"type": "varchar"
-			},
-			{
-				"name": "PRIMARY_LANGUAGE",
-				"type": "varchar"
-			},
-			{
-				"name": "CITIZENSHIP_STATUS",
-				"type": "varchar"
-			},
-			{
-				"name": "MARITAL_STATUS",
-				"type": "varchar"
-			},
-			{
-				"name": "PERSON_TYPE",
-				"type": "varchar"
-			},
-			{
-				"name": "TRIBAL_AFFILIATION",
-				"type": "varchar"
-			},
-			{
-				"name": "ICWA_ELIGIBLE_FLAG",
+				"name": "PRMRY_ROLE_IND",
 				"type": "char"
 			},
 			{
-				"name": "EDUCATION_LEVEL",
+				"name": "RLTNSHP_TO_VICTIM_CD",
 				"type": "varchar"
 			},
 			{
-				"name": "EMPLOYMENT_STATUS",
+				"name": "RLTNSHP_DESC",
 				"type": "varchar"
 			},
 			{
-				"name": "PRIMARY_PHONE",
+				"name": "PRTCPNT_START_DT",
+				"type": "date"
+			},
+			{
+				"name": "PRTCPNT_END_DT",
+				"type": "date"
+			},
+			{
+				"name": "ACTIVE_IND",
+				"type": "char"
+			},
+			{
+				"name": "COURT_ORDERED_IND",
+				"type": "char"
+			},
+			{
+				"name": "CUSTODY_GRANTED_IND",
+				"type": "char"
+			},
+			{
+				"name": "TPR_IND",
+				"type": "char"
+			},
+			{
+				"name": "TPR_DT",
+				"type": "date"
+			},
+			{
+				"name": "SAFETY_PLAN_IND",
+				"type": "char"
+			},
+			{
+				"name": "NO_CONTACT_IND",
+				"type": "char"
+			},
+			{
+				"name": "NO_CONTACT_DETAIL",
 				"type": "varchar"
 			},
 			{
-				"name": "SECONDARY_PHONE",
+				"name": "SVCS_REFERRED_IND",
+				"type": "char"
+			},
+			{
+				"name": "SVCS_TYPE_CD",
 				"type": "varchar"
 			},
 			{
-				"name": "EMAIL_ADDRESS",
+				"name": "REC_STS_CD",
 				"type": "varchar"
 			},
 			{
-				"name": "SOURCE_RECORD_STATUS",
-				"type": "varchar"
-			},
-			{
-				"name": "FRAME_CREATED_DATE",
+				"name": "CRT_TS",
 				"type": "datetime",
 				"precision": 23,
 				"scale": 3
 			},
 			{
-				"name": "FRAME_MODIFIED_DATE",
+				"name": "UPD_TS",
 				"type": "datetime",
 				"precision": 23,
 				"scale": 3
 			},
 			{
-				"name": "FRAME_CREATED_BY",
+				"name": "CRT_USER_ID",
 				"type": "varchar"
 			},
 			{
-				"name": "FRAME_MODIFIED_BY",
+				"name": "UPD_USER_ID",
 				"type": "varchar"
 			},
 			{
@@ -162,7 +142,7 @@
 		],
 		"typeProperties": {
 			"schema": "STAGING",
-			"table": "FRAME_PERSON"
+			"table": "FRAME_CASE_PARTICIPANT"
 		}
 	}
 }

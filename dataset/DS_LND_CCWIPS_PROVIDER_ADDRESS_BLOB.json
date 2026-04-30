@@ -1,12 +1,12 @@
 {
-	"name": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
+	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS_BLOB",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_Landing_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "SOURCE"
+			"name": "1. EXTRACT"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

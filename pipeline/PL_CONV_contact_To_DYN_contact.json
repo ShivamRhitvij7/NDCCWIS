@@ -1,0 +1,204 @@
+{
+	"name": "PL_CONV_contact_To_DYN_contact",
+	"properties": {
+		"activities": [
+			{
+				"name": "PL_Contact_Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\r\n    Newid() as contactid ,\r\n    xgi_externalid,\r\n    xg_ssntext,\r\n    firstname,\r\n    middlename,\r\n    lastname,\r\n    suffix,\r\n    xgi_dateofbirth,\r\n    xg_dateofdeath,\r\n    mobilephone,\r\n    overriddencreatedon,\r\n    xgi_overridemodifieddate,\r\n    emailaddress1,\r\n    gendercode,\r\n    OwnerId,\r\n    OwnerIdType,\r\n    parentcustomerid,\r\n    parentcustomeridType\r\nFROM [CONVERSION].[contact]",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "CommonDataServiceForAppsSink",
+						"writeBatchSize": 10,
+						"writeBehavior": "upsert",
+						"ignoreNullValues": false,
+						"bypassPowerAutomateFlows": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "contactid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "contactid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "emailaddress1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "emailaddress1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "firstname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "firstname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "gendercode",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "gendercode",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "lastname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "lastname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "middlename",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "middlename",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "mobilephone",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "mobilephone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "ownerid@EntityReference"
+								}
+							},
+							{
+								"source": {
+									"name": "suffix",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "suffix",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dateofdeath",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "xg_dateofdeath",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_dateofbirth",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "xgi_dateofbirth",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_externalid",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xgi_externalid",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_CONV_CONTACT",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_DATAVS_CONTACT",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "4. CONV_TO_DYNAMICS"
+		},
+		"annotations": []
+	}
+}

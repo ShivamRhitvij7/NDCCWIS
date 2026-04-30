@@ -1,0 +1,167 @@
+{
+	"name": "DS_LND_CCWIPS_PROVIDER_BLOB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Landing_AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "1. EXTRACT"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CCWIPS_PROVIDER.csv",
+				"container": "ndstorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CCWIPS_PROVIDER_ID",
+				"type": "String"
+			},
+			{
+				"name": "PRVDR_NBR",
+				"type": "String"
+			},
+			{
+				"name": "FAC_ID",
+				"type": "String"
+			},
+			{
+				"name": "LIC_NBR",
+				"type": "String"
+			},
+			{
+				"name": "PRVDR_NM",
+				"type": "String"
+			},
+			{
+				"name": "PRVDR_TYPE_CD",
+				"type": "String"
+			},
+			{
+				"name": "PRVDR_SUB_TYPE_CD",
+				"type": "String"
+			},
+			{
+				"name": "LIC_STS_CD",
+				"type": "String"
+			},
+			{
+				"name": "LIC_EFF_DT",
+				"type": "String"
+			},
+			{
+				"name": "LIC_EXP_DT",
+				"type": "String"
+			},
+			{
+				"name": "MAX_CAPACITY",
+				"type": "String"
+			},
+			{
+				"name": "CURR_CENSUS",
+				"type": "String"
+			},
+			{
+				"name": "AGE_RNG_LOW",
+				"type": "String"
+			},
+			{
+				"name": "AGE_RNG_HIGH",
+				"type": "String"
+			},
+			{
+				"name": "GENDER_ACCEPT_CD",
+				"type": "String"
+			},
+			{
+				"name": "SPCL_NEEDS_IND",
+				"type": "String"
+			},
+			{
+				"name": "ICWA_CERT_IND",
+				"type": "String"
+			},
+			{
+				"name": "SPANISH_LANG_IND",
+				"type": "String"
+			},
+			{
+				"name": "PRMRY_CNTCT_FIRST_NM",
+				"type": "String"
+			},
+			{
+				"name": "PRMRY_CNTCT_LAST_NM",
+				"type": "String"
+			},
+			{
+				"name": "PH_NBR",
+				"type": "String"
+			},
+			{
+				"name": "PH_EXT",
+				"type": "String"
+			},
+			{
+				"name": "EMAIL_ADDR",
+				"type": "String"
+			},
+			{
+				"name": "CNTY_CD",
+				"type": "String"
+			},
+			{
+				"name": "ASSIGNED_WORKER_ID",
+				"type": "String"
+			},
+			{
+				"name": "PRVDR_STS_CD",
+				"type": "String"
+			},
+			{
+				"name": "REC_STS_CD",
+				"type": "String"
+			},
+			{
+				"name": "CRT_TS",
+				"type": "String"
+			},
+			{
+				"name": "UPD_TS",
+				"type": "String"
+			},
+			{
+				"name": "CRT_USER_ID",
+				"type": "String"
+			},
+			{
+				"name": "UPD_USER_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "String"
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "String"
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "String"
+			}
+		]
+	}
+}

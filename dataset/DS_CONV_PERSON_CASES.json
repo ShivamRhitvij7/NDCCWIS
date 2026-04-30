@@ -1,0 +1,780 @@
+{
+	"name": "DS_CONV_PERSON_CASES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "4. CONVERSION"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "createdby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "createdbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "createdbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "createdon",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "createdonbehalfby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "createdonbehalfbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "createdonbehalfbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "importsequencenumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "modifiedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modifiedbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modifiedbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modifiedon",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "modifiedonbehalfby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modifiedonbehalfbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "modifiedonbehalfbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "overriddencreatedon",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "ownerid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owneridname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "owneridtype",
+				"type": "nvarchar"
+			},
+			{
+				"name": "owneridyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "owningbusinessunit",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owningbusinessunitname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "owningteam",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owninguser",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "statecode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "statuscode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "timezoneruleversionnumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "utcconversiontimezonecode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "versionnumber",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "xg_assignedworker",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_assignedworkername",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_assignedworkeryominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_associateaddress",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_caseclosedate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xg_caseid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_caseidname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_casename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_caseopendate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xg_casepersonstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_casetype",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_clientage",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_compactscenario",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_converteddata",
+				"type": "bit"
+			},
+			{
+				"name": "xg_externalid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_firstname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_ifccaseclosed",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_ifcmakeprimary",
+				"type": "bit"
+			},
+			{
+				"name": "xg_intakeid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_lastname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_middlename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_over18",
+				"type": "bit"
+			},
+			{
+				"name": "xg_parentcustodianfirstname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_parentcustodianlastname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_person",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_personcasesid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_personcellphone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_persondateofbirth",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xg_personethnicity",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_persongender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_personhomephone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_personid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_personname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_personpid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_personyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_primarycaregiver",
+				"type": "bit"
+			},
+			{
+				"name": "xg_recepient",
+				"type": "bit"
+			},
+			{
+				"name": "xg_recordtype",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_recordtypename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_relationshiptochild",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_relationshiptochildperson",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_role",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_securitystatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xg_type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xg_userinvolvedcase",
+				"type": "bit"
+			},
+			{
+				"name": "xg_victimperpetratorrelationship",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100aadoption",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100aadoptiontobefinalizedin",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100adecisionduedate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100aexpirationdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100ainitialreportrequested",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100areasonfordenialofhomestudy",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100areasonfordenialofhomestudyothertext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100aremarks",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100asendingstatesignedsignatorydate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100asupervisoryreportsrequested",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100asupervisoryreportsrequestedothertext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100asupervisoryservicesrequested",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100badoptionfinalizedstate",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100bcourtorderenclosed",
+				"type": "bit"
+			},
+			{
+				"name": "xgi_100bdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100bdateofchangeplacement",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100bdateofchildplaced",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100blegalcustodyrelationship",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100blegalcustodyrelativename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100bplacementterminationdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_100bplacementterminationotherreason",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_100bplacementterminationreason",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_100bsendingstatesignedsignatorydate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_abridgereason",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_assistanceagreementexpiration",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_assistancetype",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_casecontact",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_casecontactname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_casename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_childplacementeventstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_currentlegalstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_currentlegalstatusothertext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_dispositionnotes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_extensionexpiration",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_extensiontitleiveeligible",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_finaldispositionnotes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_finaldispositionstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_finalhomestudycompleteddate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_finalhomestudydecision",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_finalhomestudydecisiondate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_homestudyrequestdatefinal",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_homestudyrequestdatepreliminary",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_homestudyresponsedatefinal",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_homestudyresponsedatepreliminary",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_icpcadmincaseperson",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_icpcadmincasepersonname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_icrequest",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_icrequestname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_icwaeligibility",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_idmedicaidclosuredate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_idmedicaidopenrequestdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_intakeid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_intakeidname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_isicamaperson",
+				"type": "bit"
+			},
+			{
+				"name": "xgi_iveeligibility",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_medicaidclosuredateinpriorstate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_medicaidopenrequestdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_medicaidstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_name",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_namename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_nameyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_nchid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_other",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_overridecreatedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_overridecreatedbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_overridecreatedbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_overridemodifiedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_overridemodifiedbyname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_overridemodifiedbyyominame",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_overridemodifieddate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_persontypeid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_persontypeidname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_placementdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_placementnotes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_placementstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_placementtype",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_preliminarydispositionstatus",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_preliminaryhomestudycompleteddate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_preliminaryhomestudydecision",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_preliminaryhomestudydecisiondate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_reconsiderationexpirationdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_relationship",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_relocationdate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "xgi_role",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_scenariocaseperson",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_status",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_testurl",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_titleiveeligible",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_transmittal",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_transmittalname",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_typeofcare",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "xgi_typeofcareothertext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "xgi_visitation",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_visitationname",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "CONVERSION",
+			"table": "xg_personcases"
+		}
+	}
+}

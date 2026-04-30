@@ -1,0 +1,158 @@
+{
+	"name": "PL_CONV_xg_personcases_To_DYN_xg_personcases",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\r\n    xg_externalid,\r\n    xg_personcasesid,\r\n    xg_person,\r\n    xg_caseid,\r\n    xgi_role,\r\n    overriddencreatedon,\r\n    xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType\r\nFROM [CONVERSION].[xg_personcases] AS A;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "CommonDataServiceForAppsSink",
+						"writeBatchSize": 10,
+						"writeBehavior": "upsert"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "ownerid@EntityReference"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_caseid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "xg_externalid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_person",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_person",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_personcasesid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_personcasesid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_role",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_role",
+									"type": "Int32"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_CONV_PERSON_CASES",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_DATAVS_PERSON_CASES",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "4. CONV_TO_DYNAMICS"
+		},
+		"annotations": []
+	}
+}
