@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Case_Participants",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT  [FRAME_CASE_PARTICIPANT_ID] as xg_externalid\r\n        ,NEWID() as xg_personcasesid\r\n      ,B.[contactid] as xg_person\r\n      ,C.[xg_caseid] as xg_caseid\r\n      ,Case when ROLE_DESC = 'Victim' then 171060001\r\n           when ROLE_DESC = 'Parent' then 171060007\r\n           when ROLE_DESC = 'Child' then 171060009\r\n           else NULL END as xgi_role\r\n   \r\n      ,[CRT_TS] as overriddencreatedon\r\n      ,[UPD_TS] as xgi_overridemodifieddate\r\n      , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n      'systemuser' AS OwnerIdType\r\n  FROM [STAGING].[FRAME_CASE_PARTICIPANT] as A\r\n       left join [CONVERSION].[xref_contact] as B on B.xg_externalid = A.PERSON_NUMBER\r\n        left join [CONVERSION].[xref_xg_case] as C on C.xg_externalid = A.CASE_NUMBER",
+						"sqlReaderQuery": "SELECT  [FRAME_CASE_PARTICIPANT_ID] as xg_externalid\r\n        ,NEWID() as xg_personcasesid\r\n      ,B.[contactid] as xg_person\r\n      ,C.[xg_caseid] as xg_caseid\r\n      ,Case when ROLE_DESC = 'Victim' then 171060001\r\n           when ROLE_DESC = 'Parent' then 171060007\r\n           when ROLE_DESC = 'Child' then 171060009\r\n           else NULL END as xgi_role\r\n   \r\n      ,[CRT_TS] as overriddencreatedon\r\n      ,[UPD_TS] as xgi_overridemodifieddate\r\n      , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n      'systemuser' AS OwnerIdType\r\n  FROM [STAGING].[FRAME_CASE_PARTICIPANT] as A\r\n       left join [CONVERSION].[xref_contact] as B on B.xg_externalid = A.PERSON_NUMBER\r\n        left join [CONVERSION].[xref_xg_case] as C on C.xg_externalid = A.CASE_NUMBER\r\n       where A.GOLDEN_RECORD_FLAG='P'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
