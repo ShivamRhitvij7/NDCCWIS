@@ -1,0 +1,194 @@
+{
+	"name": "DS_LND_FRAME_CASE_PARTICIPANT_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "2. LANDING"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FRAME_CASE_PARTICIPANT_ID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "PERSON_NUMBER",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CASE_NUMBER",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ROLE_CD",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ROLE_DESC",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "PRMRY_ROLE_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "RLTNSHP_TO_VICTIM_CD",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "RLTNSHP_DESC",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "PRTCPNT_START_DT",
+				"type": "date",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "PRTCPNT_END_DT",
+				"type": "date",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ACTIVE_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "COURT_ORDERED_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CUSTODY_GRANTED_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "TPR_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "TPR_DT",
+				"type": "date",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SAFETY_PLAN_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "NO_CONTACT_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "NO_CONTACT_DETAIL",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SVCS_REFERRED_IND",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SVCS_TYPE_CD",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "REC_STS_CD",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CRT_TS",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UPD_TS",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CRT_USER_ID",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "UPD_USER_ID",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "LOAD_BATCH_ID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "LOAD_DATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SOURCE_FILE_NAME",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ROW_HASH",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "LANDING",
+			"table": "FRAME_CASE_PARTICIPANT"
+		}
+	}
+}

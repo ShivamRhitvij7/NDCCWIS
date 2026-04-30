@@ -1,10 +1,9 @@
 {
-	"name": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
+	"name": "PL_Blob_Lnd_FRAME_PERSON_PARTICIPANT",
 	"properties": {
 		"activities": [
 			{
-				"name": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
-				"description": "PL_Ingest_LND_CCWIPS_PROVIDER_ADDRESS",
+				"name": "PL_Ingest_LND_FRAME_PERSON_PARTICIPANT",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -17,11 +16,11 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "ndstorage//CCWIPS_PROVIDER_ADDRESS .csv"
+						"value": "ndstorage//FRAME_CASE_PARTICIPANT.txt"
 					},
 					{
 						"name": "Destination",
-						"value": "LANDING.CCWIPS_PROVIDER_ADDRESS"
+						"value": "LANDING.FRAME_CASE_PARTICIPANT"
 					}
 				],
 				"typeProperties": {
@@ -39,12 +38,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"writeBehavior": "upsert",
-						"upsertSettings": {
-							"useTempDB": true
-						},
-						"sqlWriterUseTableLock": false,
-						"disableMetricsCollection": false
+						"preCopyScript": "Truncate table LANDING.FRAME_CASE_PARTICIPANT;"
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
@@ -53,218 +47,242 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "CCWIPS_PROVIDER_ADDRESS_ID",
+									"name": "FRAME_CASE_PARTICIPANT_ID",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CCWIPS_PROVIDER_ADDRESS_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"name": "FRAME_CASE_PARTICIPANT_ID",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "CCWIPS_PROVIDER_ID",
+									"name": "PERSON_NUMBER",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CCWIPS_PROVIDER_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"name": "PERSON_NUMBER",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "ADDR_TYPE_CD",
+									"name": "CASE_NUMBER",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ADDR_TYPE_CD",
+									"name": "CASE_NUMBER",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ROLE_CD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ROLE_CD",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ROLE_DESC",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ROLE_DESC",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "PRMRY_ROLE_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PRMRY_ROLE_IND",
 									"type": "String",
 									"physicalType": "char"
 								}
 							},
 							{
 								"source": {
-									"name": "PRMRY_IND",
+									"name": "RLTNSHP_TO_VICTIM_CD",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "PRMRY_IND",
-									"type": "String",
-									"physicalType": "char"
-								}
-							},
-							{
-								"source": {
-									"name": "ADDR_STS_CD",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ADDR_STS_CD",
-									"type": "String",
-									"physicalType": "char"
-								}
-							},
-							{
-								"source": {
-									"name": "STR_NBR",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "STR_NBR",
+									"name": "RLTNSHP_TO_VICTIM_CD",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "STR_NM",
+									"name": "RLTNSHP_DESC",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "STR_NM",
+									"name": "RLTNSHP_DESC",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "APT_NBR",
+									"name": "PRTCPNT_START_DT",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "APT_NBR",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "CITY_NM",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "CITY_NM",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "ST_CD",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ST_CD",
-									"type": "String",
-									"physicalType": "char"
-								}
-							},
-							{
-								"source": {
-									"name": "ZIP_CD",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ZIP_CD",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "ZIP_EXT",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ZIP_EXT",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "CNTY_CD",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "CNTY_CD",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "CNTRY_CD",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "CNTRY_CD",
-									"type": "String",
-									"physicalType": "char"
-								}
-							},
-							{
-								"source": {
-									"name": "LAT_VAL",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "LAT_VAL",
-									"type": "Decimal",
-									"physicalType": "decimal"
-								}
-							},
-							{
-								"source": {
-									"name": "LONG_VAL",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "LONG_VAL",
-									"type": "Decimal",
-									"physicalType": "decimal"
-								}
-							},
-							{
-								"source": {
-									"name": "EFF_START_DT",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "EFF_START_DT",
+									"name": "PRTCPNT_START_DT",
 									"type": "DateTime",
 									"physicalType": "date"
 								}
 							},
 							{
 								"source": {
-									"name": "EFF_END_DT",
+									"name": "PRTCPNT_END_DT",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "EFF_END_DT",
+									"name": "PRTCPNT_END_DT",
 									"type": "DateTime",
 									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "ACTIVE_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ACTIVE_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "COURT_ORDERED_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "COURT_ORDERED_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "CUSTODY_GRANTED_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CUSTODY_GRANTED_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "TPR_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TPR_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "TPR_DT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TPR_DT",
+									"type": "DateTime",
+									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "SAFETY_PLAN_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SAFETY_PLAN_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "NO_CONTACT_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NO_CONTACT_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "NO_CONTACT_DETAIL",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NO_CONTACT_DETAIL",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "SVCS_REFERRED_IND",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SVCS_REFERRED_IND",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "SVCS_TYPE_CD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SVCS_TYPE_CD",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -276,7 +294,7 @@
 								"sink": {
 									"name": "REC_STS_CD",
 									"type": "String",
-									"physicalType": "char"
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -288,7 +306,7 @@
 								"sink": {
 									"name": "CRT_TS",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								}
 							},
 							{
@@ -300,7 +318,7 @@
 								"sink": {
 									"name": "UPD_TS",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								}
 							},
 							{
@@ -335,8 +353,8 @@
 								},
 								"sink": {
 									"name": "LOAD_BATCH_ID",
-									"type": "Int64",
-									"physicalType": "bigint"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -348,7 +366,7 @@
 								"sink": {
 									"name": "LOAD_DATE",
 									"type": "DateTime",
-									"physicalType": "datetime2"
+									"physicalType": "datetime"
 								}
 							},
 							{
@@ -371,8 +389,8 @@
 								},
 								"sink": {
 									"name": "ROW_HASH",
-									"type": "Byte[]",
-									"physicalType": "varbinary"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
 						],
@@ -385,20 +403,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
+						"referenceName": "DS_LND_FRAME_CASE_PARTICIPANT_BLOB",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+						"referenceName": "DS_LND_FRAME_CASE_PARTICIPANT_SQL",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"folder": {
-			"name": "Ingestion/LANDING/CCWIPS"
+			"name": "1. FILE_TO_LND/Pipelines"
 		},
 		"annotations": []
 	}

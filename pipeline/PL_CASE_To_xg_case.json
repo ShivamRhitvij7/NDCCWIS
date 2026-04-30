@@ -1,0 +1,182 @@
+{
+	"name": "PL_CASE_To_xg_case",
+	"properties": {
+		"activities": [
+			{
+				"name": "CNV_CaseToCase",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\r\n    [CASE_NUMBER] AS [xg_externalid],\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'INVESTIGATION' THEN 171060016\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'CASE MANAGEMENT' THEN 171060024\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PERMANENCY' THEN 171060022\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PRIVATE PERMANENCY' THEN 292460001\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ADOPTION' THEN 171060032\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'EXTENDED FOSTER CARE' THEN 171060028\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'APPEAL' THEN 171060006\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'GUARDIANSHIP' THEN 171060031\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICPC' THEN 171060019\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'ICAMA' THEN 292460002\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'POST-PERMANENCY SERVICE' THEN 171060020\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'STANDARDS COMPLAINT CASE' THEN 292460000\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'PROVIDER SERVICE' THEN 171060033\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_TYPE))) = 'Family Service' THEN 541120001\r\n        ELSE NULL\r\n    END AS xg_casetype,\r\n\r\n    CASE\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'ACTIVE' THEN 1\r\n        WHEN UPPER(LTRIM(RTRIM(CASE_STATUS))) = 'CLOSED' THEN 2\r\n        ELSE NULL\r\n    END AS statuscode,\r\n\r\n    [OPEN_DATE] AS xg_caseopendate,\r\n    [CLOSE_DATE] AS xg_caseclosedate,\r\n    [CLOSE_REASON] AS xg_closurereason,\r\n    [FRAME_CREATED_DATE] AS overriddencreatedon,\r\n    [FRAME_MODIFIED_DATE] AS xgi_overridemodifieddate,\r\n    CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n    'systemuser' AS OwnerIdType\r\nFROM [STAGING].[FRAME_CASE];\r\n ",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "Truncate table [CONVERSION].[xg_case];",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "owneridtype",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "statuscode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "statuscode",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseclosedate",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "xg_caseclosedate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseopendate",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "xg_caseopendate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casetype",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_closurereason",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_closurereason",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STG_FRAME_CASE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_CONV_CASE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "3. STG_TO_CONV"
+		},
+		"annotations": []
+	}
+}

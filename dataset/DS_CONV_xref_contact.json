@@ -1,0 +1,28 @@
+{
+	"name": "DS_CONV_xref_contact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "4. CONVERSION"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "contactid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_externalid",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "CONVERSION",
+			"table": "xref_contact"
+		}
+	}
+}

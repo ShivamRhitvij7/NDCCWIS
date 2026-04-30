@@ -1,0 +1,318 @@
+{
+	"name": "DS_CONV_PERSON_ADDRESS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COVNERSION_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "4. CONVERSION"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "createdby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "createdbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "createdbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "createdon",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "createdonbehalfby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "createdonbehalfbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "createdonbehalfbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "importsequencenumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "modifiedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modifiedbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "modifiedbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "modifiedon",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "modifiedonbehalfby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "modifiedonbehalfbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "modifiedonbehalfbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "overriddencreatedon",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ownerid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owneridname",
+				"type": "varchar"
+			},
+			{
+				"name": "owneridtype",
+				"type": "varchar"
+			},
+			{
+				"name": "owneridyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "owningbusinessunit",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owningbusinessunitname",
+				"type": "varchar"
+			},
+			{
+				"name": "owningteam",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "owninguser",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "statecode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "statuscode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "timezoneruleversionnumber",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "utcconversiontimezonecode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "versionnumber",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "xg_address",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_addressname",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_addresstype",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_apartmentnumber",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_city",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_completeaddress",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_converteddata",
+				"type": "bit"
+			},
+			{
+				"name": "xg_country",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_county",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_externalid",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_latitude",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_longitude",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_name",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_person",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_personaddressid",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xg_personname",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_personyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_poboxnumber",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_state",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_status",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_street1",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_street1hyperlink",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_street1soundexkey",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_street2",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_street2soundexkey",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_streetnumber",
+				"type": "varchar"
+			},
+			{
+				"name": "xg_zip",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_addresstype",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_attention",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_country",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_enddate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "xgi_lastknownaddress",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_overridecreatedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_overridecreatedbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_overridecreatedbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_overridemodifiedby",
+				"type": "uniqueidentifier"
+			},
+			{
+				"name": "xgi_overridemodifiedbyname",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_overridemodifiedbyyominame",
+				"type": "varchar"
+			},
+			{
+				"name": "xgi_overridemodifieddate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "xgi_startdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "xgi_state",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "CONVERSION",
+			"table": "xg_personaddress"
+		}
+	}
+}

@@ -1,0 +1,181 @@
+{
+	"name": "PL_CONV_xg_case_To_DYN_xg_case",
+	"properties": {
+		"description": "Pipeline to copy data from Conversion Schema Case table to Dynamics case table",
+		"activities": [
+			{
+				"name": "PL_Case_Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\r\n     NEWID() as xg_caseid,\r\n    '171060016' as xg_casetype,\r\n -- xg_caseopendate,\r\n--  xg_caseclosedate,\r\n -- xg_closurereason,\r\n -- overriddencreatedon,\r\n-- xgi_overridemodifieddate,\r\n    OwnerId,\r\n    OwnerIdType,\r\n  171060002 as xg_dispositionstatus,\r\n    171060002 as xg_finaldispositionstatus,\r\n    171060000 as xg_servicetype,\r\n    292460018 as xg_status,\r\n   'TEST' as owneridname,\r\n  'TEST' as owningbusinessunitname,\r\n'TEST DIVISION'  as xg_casenamedivisionwise\r\nFROM [CONVERSION].[xg_case] ",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "CommonDataServiceForAppsSink",
+						"writeBatchSize": 10,
+						"writeBehavior": "upsert"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "owneridname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "owneridname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "ownerid@EntityReference"
+								}
+							},
+							{
+								"source": {
+									"name": "owningbusinessunitname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "owningbusinessunitname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_caseid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casenamedivisionwise",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_casenamedivisionwise",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_casetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_casetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dispositionstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_dispositionstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_finaldispositionstatus",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_finaldispositionstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_servicetype",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_servicetype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_status",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_status",
+									"type": "Int32"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_CONV_CASE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_DATAVS_CASE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "4. CONV_TO_DYNAMICS"
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,170 @@
+{
+	"name": "PL_CASE_PARTICIPANT_To_xg_personcases",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT  [FRAME_CASE_PARTICIPANT_ID] as xg_externalid\r\n        ,NEWID() as xg_personcasesid\r\n      ,B.[contactid] as xg_person\r\n      ,C.[xg_caseid] as xg_caseid\r\n      ,Case when ROLE_DESC = 'Victim' then 171060001\r\n           when ROLE_DESC = 'Parent' then 171060007\r\n           when ROLE_DESC = 'Child' then 171060009\r\n           else NULL END as xgi_role\r\n   \r\n      ,[CRT_TS] as overriddencreatedon\r\n      ,[UPD_TS] as xgi_overridemodifieddate\r\n      , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId,\r\n      'systemuser' AS OwnerIdType\r\n  FROM [STAGING].[FRAME_CASE_PARTICIPANT] as A\r\n       left join [CONVERSION].[xref_contact] as B on B.xg_externalid = A.PERSON_NUMBER\r\n        left join [CONVERSION].[xref_xg_case] as C on C.xg_externalid = A.CASE_NUMBER",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE table CONVERSION.xg_personcases;",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "owneridtype",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_caseid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_externalid",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xg_externalid",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_person",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_person",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_personcasesid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "xg_personcasesid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime2"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_role",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "xgi_role",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STG_FRAME_CASE_PARTICIPANT",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_CONV_PERSON_CASES",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "3. STG_TO_CONV"
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"name": "PL_Blob_Lnd_CCWIPS_PROVIDER",
+	"properties": {
+		"activities": [
+			{
+				"name": "PL_Ingest_LND_CCWIPS_PROVIDER",
+				"description": "PL_Ingest_LND_CCWIPS_PROVIDER",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ndstorage//CCWIPS_PROVIDER .csv"
+					},
+					{
+						"name": "Destination",
+						"value": "LANDING.CCWIPS_PROVIDER"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE TABLE LANDING.CCWIPS_PROVIDER;",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_BLOB",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_SQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"SchemaName": "LANDING",
+							"TableName": "CCWIPS_PROVIDER"
+						}
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "1. FILE_TO_LND/Pipelines"
+		},
+		"annotations": []
+	}
+}

@@ -1,168 +1,163 @@
 {
-	"name": "DS_STG_FRAME_PERSON",
+	"name": "DS_LND_FRAME_PERSON_BLOB",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_COVNERSION_SQL",
+			"referenceName": "LS_Landing_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "3. STAGING"
+			"name": "1. EXTRACT"
 		},
 		"annotations": [],
-		"type": "AzureSqlTable",
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FRAME_PERSON.txt",
+				"container": "ndstorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
 		"schema": [
 			{
 				"name": "FRAME_PERSON_ID",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "PERSON_NUMBER",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "SSN_ENCRYPTED",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "MEDICAID_ID",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "FIRST_NAME",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "MIDDLE_NAME",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "LAST_NAME",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "SUFFIX",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "DATE_OF_BIRTH",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "DATE_OF_DEATH",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "GENDER_CODE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "RACE_CODE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "SECONDARY_RACE_CODE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ETHNICITY_CODE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "PRIMARY_LANGUAGE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "CITIZENSHIP_STATUS",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "MARITAL_STATUS",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "PERSON_TYPE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "TRIBAL_AFFILIATION",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ICWA_ELIGIBLE_FLAG",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "EDUCATION_LEVEL",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "EMPLOYMENT_STATUS",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "PRIMARY_PHONE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "SECONDARY_PHONE",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "EMAIL_ADDRESS",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "SOURCE_RECORD_STATUS",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "FRAME_CREATED_DATE",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
+				"type": "String"
 			},
 			{
 				"name": "FRAME_MODIFIED_DATE",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
+				"type": "String"
 			},
 			{
 				"name": "FRAME_CREATED_BY",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "FRAME_MODIFIED_BY",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "LOAD_BATCH_ID",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "LOAD_DATE",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
+				"type": "String"
 			},
 			{
 				"name": "SOURCE_FILE_NAME",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ROW_HASH",
-				"type": "varchar"
-			},
-			{
-				"name": "GOLDEN_RECORD_FLAG",
-				"type": "char"
+				"type": "String"
 			}
-		],
-		"typeProperties": {
-			"schema": "STAGING",
-			"table": "FRAME_PERSON"
-		}
+		]
 	}
 }

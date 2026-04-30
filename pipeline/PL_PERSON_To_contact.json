@@ -1,0 +1,266 @@
+{
+	"name": "PL_PERSON_To_contact",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\n      [PERSON_NUMBER] as xgi_externalid\n      ,CAST([FRAME_PERSON_ID] AS VARCHAR)  as contactid\n      ,cast([SSN_ENCRYPTED] as varchar(11)) as xg_ssntext\n      ,[FIRST_NAME] as firstname\n      ,[MIDDLE_NAME] as middlename\n      ,[LAST_NAME] as  lastname\n      ,[SUFFIX] as suffix\n      ,[DATE_OF_BIRTH]as xgi_dateofbirth\n      ,[DATE_OF_DEATH] as xg_dateofdeath\n      ,[PRIMARY_PHONE] as mobilephone\n      ,[FRAME_CREATED_DATE] as overriddencreatedon\n      ,[FRAME_MODIFIED_DATE] as xgi_overridemodifieddate\n      ,EMAIL_ADDRESS as emailaddress1\n      ,case\n        WHEN UPPER(LTRIM(RTRIM(GENDER_CODE))) IN ('M','MALE') THEN 1\n        WHEN UPPER(LTRIM(RTRIM(GENDER_CODE))) IN ('F','FEMALE') THEN 2\n       else NULL\n       end as gendercode\n     , CAST('fa1abe76-6b34-ef11-8409-6045bdd63e76' AS uniqueidentifier) AS OwnerId\n   ,'systemuser' AS OwnerIdType\n ,  CAST('85dae142-0ad8-ef11-8ee9-000d3a185ee5' AS uniqueidentifier) AS parentcustomerid\n  , 'account'         AS parentcustomeridType\n  FROM [STAGING].[FRAME_PERSON]",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE TABLE [CONVERSION].[contact];",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "emailaddress1",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "emailaddress1",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "firstname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "firstname",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "gendercode",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "gendercode",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "lastname",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "lastname",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "middlename",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "middlename",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "mobilephone",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "mobilephone",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "overriddencreatedon",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerId",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "OwnerIdType",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "owneridtype",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "parentcustomerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								},
+								"sink": {
+									"name": "parentcustomerid",
+									"type": "Guid",
+									"physicalType": "uniqueidentifier"
+								}
+							},
+							{
+								"source": {
+									"name": "parentcustomeridType",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "parentcustomeridtype",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "suffix",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "suffix",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_dateofdeath",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "xg_dateofdeath",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"source": {
+									"name": "xg_ssntext",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xg_ssntext",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_dateofbirth",
+									"type": "Date",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "xgi_dateofbirth",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_externalid",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "xgi_externalid",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								},
+								"sink": {
+									"name": "xgi_overridemodifieddate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_STG_FRAME_PERSON",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_CONV_CONTACT",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "3. STG_TO_CONV"
+		},
+		"annotations": []
+	}
+}
