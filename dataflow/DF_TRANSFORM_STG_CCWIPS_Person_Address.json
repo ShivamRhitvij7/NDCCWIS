@@ -5,19 +5,11 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "DS_LND_CCWIPS_PROVIDER_ADDRESS",
-						"type": "DatasetReference"
-					},
 					"name": "dsLndCcwipsProviderAddress"
 				}
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
-						"type": "DatasetReference"
-					},
 					"name": "SNKSTGPROVIDERADDRESS"
 				}
 			],
@@ -72,9 +64,7 @@
 				"          ROW_HASH as binary",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> dsLndCcwipsProviderAddress",
+				"     validateSchema: false) ~> dsLndCcwipsProviderAddress",
 				"dsLndCcwipsProviderAddress derive(CCWIPS_PROVIDER_ADDRESS_ID = toLong(trim(toString(CCWIPS_PROVIDER_ADDRESS_ID))),",
 				"          CCWIPS_PROVIDER_ID = toLong(trim(toString(CCWIPS_PROVIDER_ID))),",
 				"          ADDR_TYPE_CD = upper(trim(toString(ADDR_TYPE_CD))),",
@@ -95,44 +85,8 @@
 				"FILVALID alterRow(upsertIf(true())) ~> ARUPSERT",
 				"ARUPSERT sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          CCWIPS_PROVIDER_ADDRESS_ID as long,",
-				"          CCWIPS_PROVIDER_ID as long,",
-				"          ADDR_TYPE_CD as string,",
-				"          PRMRY_IND as string,",
-				"          ADDR_STS_CD as string,",
-				"          STR_NBR as string,",
-				"          STR_NM as string,",
-				"          APT_NBR as string,",
-				"          CITY_NM as string,",
-				"          ST_CD as string,",
-				"          ZIP_CD as string,",
-				"          ZIP_EXT as string,",
-				"          CNTY_CD as string,",
-				"          CNTRY_CD as string,",
-				"          LAT_VAL as decimal(10,6),",
-				"          LONG_VAL as decimal(11,6),",
-				"          EFF_START_DT as date,",
-				"          EFF_END_DT as date,",
-				"          REC_STS_CD as string,",
-				"          CRT_TS as timestamp,",
-				"          UPD_TS as timestamp,",
-				"          CRT_USER_ID as string,",
-				"          UPD_USER_ID as string,",
-				"          LOAD_BATCH_ID as long,",
-				"          LOAD_DATE as timestamp,",
-				"          SOURCE_FILE_NAME as string,",
-				"          ROW_HASH as binary",
-				"     ),",
-				"     deletable:false,",
-				"     insertable:true,",
-				"     updateable:true,",
-				"     upsertable:true,",
-				"     keys:['CCWIPS_PROVIDER_ADDRESS_ID'],",
-				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          CCWIPS_PROVIDER_ADDRESS_ID,",
 				"          CCWIPS_PROVIDER_ID,",
@@ -161,7 +115,8 @@
 				"          LOAD_DATE,",
 				"          SOURCE_FILE_NAME,",
 				"          ROW_HASH",
-				"     )) ~> SNKSTGPROVIDERADDRESS"
+				"     ),",
+				"     format: 'table') ~> SNKSTGPROVIDERADDRESS"
 			]
 		}
 	}
