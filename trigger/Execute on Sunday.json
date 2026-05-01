@@ -1,0 +1,36 @@
+{
+	"name": "Execute on Sunday",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Master_Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2026-05-01T21:54:00",
+				"endTime": "2026-05-03T21:54:00",
+				"timeZone": "Eastern Standard Time",
+				"schedule": {
+					"minutes": [
+						30
+					],
+					"hours": [
+						12
+					],
+					"weekDays": [
+						"Sunday"
+					]
+				}
+			}
+		}
+	}
+}
