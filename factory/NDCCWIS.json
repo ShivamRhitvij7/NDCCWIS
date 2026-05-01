@@ -1,5 +1,11 @@
 {
 	"name": "NDCCWIS",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",

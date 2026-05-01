@@ -24,7 +24,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_STG_FRAME_PERSON",
+						"referenceName": "DS_LND_FRAME_PERSON_SQL",
 						"type": "DatasetReference"
 					}
 				}
@@ -186,7 +186,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_STG_FRAME_PERSON",
+						"referenceName": "DS_LND_FRAME_PERSON_SQL",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -220,7 +220,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_STG_FRAME_PERSON",
+						"referenceName": "DS_LND_FRAME_PERSON_SQL",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false

@@ -906,7 +906,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "TRUNCATE TABLE [STAGING].[FRAME_PERSON]",
+						"preCopyScript": "Truncate table STAGING.[FRAME_PERSON];",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false,
 						"disableMetricsCollection": false
@@ -1333,7 +1333,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_STG_FRAME_PERSON",
+						"referenceName": "DS_LND_FRAME_PERSON_SQL",
 						"type": "DatasetReference"
 					}
 				],

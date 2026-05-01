@@ -96,6 +96,29 @@
 						"RunID": "1001"
 					}
 				}
+			},
+			{
+				"name": "Staging_to_Conversion",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "CLEANSING",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_STG_TO_CONV_MASTER",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"annotations": []

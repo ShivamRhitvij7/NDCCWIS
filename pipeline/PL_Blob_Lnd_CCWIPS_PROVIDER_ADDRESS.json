@@ -39,8 +39,7 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false,
-						"disableMetricsCollection": false
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"validateDataConsistency": false,
@@ -387,8 +386,12 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
-						"type": "DatasetReference"
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_ADDRESS_SQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"SchemaName": "LANDING",
+							"TableName": "CCWIPS_PROVIDER_ADDRESS"
+						}
 					}
 				]
 			}
