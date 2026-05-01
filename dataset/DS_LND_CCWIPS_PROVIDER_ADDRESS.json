@@ -1,14 +1,27 @@
 {
-	"name": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+	"name": "DS_LND_CCWIPS_PROVIDER_ADDRESS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
 			"type": "LinkedServiceReference"
 		},
-		"folder": {
-			"name": "STG"
+		"parameters": {
+			"SchemaName": {
+				"type": "String",
+				"defaultValue": "LANDING"
+			},
+			"TableName": {
+				"type": "String",
+				"defaultValue": "CCWIPS_PROVIDER_ADDRESS"
+			}
 		},
-		"annotations": [],
+		"folder": {
+			"name": "LND"
+		},
+		"annotations": [
+			"Azure SQL",
+			"Parameterized dataset"
+		],
 		"type": "AzureSqlTable",
 		"schema": [
 			{
@@ -131,8 +144,14 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "STAGING",
-			"table": "CCWIPS_PROVIDER_ADDRESS"
+			"schema": {
+				"value": "@dataset().SchemaName",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

@@ -1,139 +1,136 @@
 {
-	"name": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+	"name": "DS_SRC_CCWIPS_PROVIDER_ADDRESS",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_COVNERSION_SQL",
+			"referenceName": "LS_Landing_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "STG"
+			"name": "SRC"
 		},
 		"annotations": [],
-		"type": "AzureSqlTable",
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CCWIPS_PROVIDER_ADDRESS .csv",
+				"container": "ndstorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
 		"schema": [
 			{
 				"name": "CCWIPS_PROVIDER_ADDRESS_ID",
-				"type": "bigint",
-				"precision": 19
+				"type": "String"
 			},
 			{
 				"name": "CCWIPS_PROVIDER_ID",
-				"type": "bigint",
-				"precision": 19
+				"type": "String"
 			},
 			{
 				"name": "ADDR_TYPE_CD",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "PRMRY_IND",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "ADDR_STS_CD",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "STR_NBR",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "STR_NM",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "APT_NBR",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "CITY_NM",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ST_CD",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "ZIP_CD",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ZIP_EXT",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "CNTY_CD",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "CNTRY_CD",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "LAT_VAL",
-				"type": "decimal",
-				"precision": 10,
-				"scale": 6
+				"type": "String"
 			},
 			{
 				"name": "LONG_VAL",
-				"type": "decimal",
-				"precision": 11,
-				"scale": 6
+				"type": "String"
 			},
 			{
 				"name": "EFF_START_DT",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "EFF_END_DT",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "REC_STS_CD",
-				"type": "char"
+				"type": "String"
 			},
 			{
 				"name": "CRT_TS",
-				"type": "datetime2",
-				"scale": 7
+				"type": "String"
 			},
 			{
 				"name": "UPD_TS",
-				"type": "datetime2",
-				"scale": 7
+				"type": "String"
 			},
 			{
 				"name": "CRT_USER_ID",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "UPD_USER_ID",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "LOAD_BATCH_ID",
-				"type": "bigint",
-				"precision": 19
+				"type": "String"
 			},
 			{
 				"name": "LOAD_DATE",
-				"type": "datetime2",
-				"scale": 7
+				"type": "String"
 			},
 			{
 				"name": "SOURCE_FILE_NAME",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "ROW_HASH",
-				"type": "varbinary"
+				"type": "String"
 			}
-		],
-		"typeProperties": {
-			"schema": "STAGING",
-			"table": "CCWIPS_PROVIDER_ADDRESS"
-		}
+		]
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -58,11 +58,13 @@
 			}
 		},
 		"folder": {
-			"name": "2. LND_TO_STG/DataFlow"
+			"name": "STG/CCWIPS"
 		},
 		"annotations": [
 			"ADF Mapping Data Flow",
 			"LS_COVNERSION_SQL"
-		]
-	}
+		],
+		"lastPublishTime": "2026-04-19T14:50:06Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

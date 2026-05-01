@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "3. STAGING"
+			"name": "STG"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
@@ -164,5 +164,6 @@
 			"schema": "STAGING",
 			"table": "FRAME_PERSON"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

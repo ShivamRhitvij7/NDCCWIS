@@ -1,12 +1,9 @@
 {
-	"name": "DS_STG_CCWIPS_PROVIDER_ADDRESS",
+	"name": "DestinationDataset_p6n",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_COVNERSION_SQL",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "STG"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
@@ -14,60 +11,86 @@
 			{
 				"name": "CCWIPS_PROVIDER_ADDRESS_ID",
 				"type": "bigint",
-				"precision": 19
+				"precision": 19,
+				"scale": 0
 			},
 			{
 				"name": "CCWIPS_PROVIDER_ID",
 				"type": "bigint",
-				"precision": 19
+				"precision": 19,
+				"scale": 0
 			},
 			{
 				"name": "ADDR_TYPE_CD",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "PRMRY_IND",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "ADDR_STS_CD",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "STR_NBR",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "STR_NM",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "APT_NBR",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "CITY_NM",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "ST_CD",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "ZIP_CD",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "ZIP_EXT",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "CNTY_CD",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "CNTRY_CD",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "LAT_VAL",
@@ -83,55 +106,73 @@
 			},
 			{
 				"name": "EFF_START_DT",
-				"type": "date"
+				"type": "date",
+				"precision": 10,
+				"scale": 0
 			},
 			{
 				"name": "EFF_END_DT",
-				"type": "date"
+				"type": "date",
+				"precision": 10,
+				"scale": 0
 			},
 			{
 				"name": "REC_STS_CD",
-				"type": "char"
+				"type": "char",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "CRT_TS",
 				"type": "datetime2",
+				"precision": 27,
 				"scale": 7
 			},
 			{
 				"name": "UPD_TS",
 				"type": "datetime2",
+				"precision": 27,
 				"scale": 7
 			},
 			{
 				"name": "CRT_USER_ID",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "UPD_USER_ID",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "LOAD_BATCH_ID",
 				"type": "bigint",
-				"precision": 19
+				"precision": 19,
+				"scale": 0
 			},
 			{
 				"name": "LOAD_DATE",
 				"type": "datetime2",
+				"precision": 27,
 				"scale": 7
 			},
 			{
 				"name": "SOURCE_FILE_NAME",
-				"type": "varchar"
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
 			},
 			{
 				"name": "ROW_HASH",
-				"type": "varbinary"
+				"type": "varbinary",
+				"precision": 0,
+				"scale": 0
 			}
 		],
 		"typeProperties": {
-			"schema": "STAGING",
+			"schema": "LANDING",
 			"table": "CCWIPS_PROVIDER_ADDRESS"
 		}
 	},

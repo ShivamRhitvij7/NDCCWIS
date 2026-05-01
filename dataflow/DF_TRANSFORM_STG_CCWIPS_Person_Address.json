@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "DS_LND_CCWIPS_PROVIDER_ADDRESS_SQL",
+						"referenceName": "DS_LND_CCWIPS_PROVIDER_ADDRESS",
 						"type": "DatasetReference"
 					},
 					"name": "dsLndCcwipsProviderAddress"
